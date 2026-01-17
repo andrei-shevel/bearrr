@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import "./Header.css";
 
-export default function Header() {
+export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Close menu when clicking a link
