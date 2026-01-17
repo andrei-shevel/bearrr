@@ -1,21 +1,15 @@
-import type { Metadata } from "next";
-import { format } from "date-fns";
+import type { Metadata } from 'next';
+import { format } from 'date-fns';
 
-import cv from "@/data/cv.json" with { type: "json" };
-import { getYearsOfExperience } from "@/lib/utils";
+import cv from '@/data/cv.json' with { type: 'json' };
+import { getYearsOfExperience } from '@/lib/utils';
 
-import "./style.css";
+import './style.css';
 
 export const metadata: Metadata = {
-  title: "CV",
-  description:
-    "Professional experience, technical skills, and education of Andrei Shevel.",
-  keywords: [
-    "Andrei Shevel CV",
-    "Software Engineer",
-    "Tech Lead",
-    "Frontend Developer",
-  ],
+  title: 'CV',
+  description: 'Professional experience, technical skills, and education of Andrei Shevel.',
+  keywords: ['Andrei Shevel CV', 'Software Engineer', 'Tech Lead', 'Frontend Developer'],
 };
 
 export default function CV() {
@@ -24,11 +18,9 @@ export default function CV() {
       <section className="cv-section">
         <h2 className="cv-section-title">Profile</h2>
         <p className="cv-profile">
-          {getYearsOfExperience()}+ years building and scaling web applications.
-          I lead frontend architecture decisions, mentor engineering teams, and
-          bridge technical execution with business outcomes. My focus is on
-          sustainable practices—migrations, modularization, component
-          systems—that compound team velocity over time.
+          {getYearsOfExperience()}+ years building and scaling web applications. I lead frontend architecture decisions,
+          mentor engineering teams, and bridge technical execution with business outcomes. My focus is on sustainable
+          practices—migrations, modularization, component systems—that compound team velocity over time.
         </p>
       </section>
 
@@ -42,14 +34,12 @@ export default function CV() {
                 <h3>{item.position}</h3>
                 <p className="cv-company">
                   {item.company}
-                  {item.location ? ` · ${item.location}` : ""}
+                  {item.location ? ` · ${item.location}` : ''}
                 </p>
               </div>
               <span className="cv-date">
-                {format(new Date(item.startDate), "MMM yyyy")} —{" "}
-                {item.endDate
-                  ? format(new Date(item.endDate), "MMM yyyy")
-                  : "Present"}
+                {format(new Date(item.startDate), 'MMM yyyy')} —{' '}
+                {item.endDate ? format(new Date(item.endDate), 'MMM yyyy') : 'Present'}
               </span>
             </div>
             <ul className="cv-list">
@@ -67,7 +57,7 @@ export default function CV() {
           {Object.entries(cv.skills).map(([group, skills]) => (
             <div key={group} className="cv-skill-group">
               <h4>{group}</h4>
-              <p>{skills.join(", ")}</p>
+              <p>{skills.join(', ')}</p>
             </div>
           ))}
         </div>
@@ -90,14 +80,12 @@ export default function CV() {
               <h3>{item.degree}</h3>
               <p className="cv-company">
                 {item.school}
-                {item.location ? ` · ${item.location}` : ""}
+                {item.location ? ` · ${item.location}` : ''}
               </p>
             </div>
             <span className="cv-date">
-              {format(new Date(item.startDate), "yyyy")} —{" "}
-              {item.endDate
-                ? format(new Date(item.endDate), "yyyy")
-                : "Present"}
+              {format(new Date(item.startDate), 'yyyy')} —{' '}
+              {item.endDate ? format(new Date(item.endDate), 'yyyy') : 'Present'}
             </span>
           </div>
         ))}
@@ -118,18 +106,10 @@ export default function CV() {
         <h2 className="cv-section-title">Get in Touch</h2>
         <div className="cv-contact-links">
           <a href="mailto:sendtoshevvy@gmail.com">sendtoshevvy@gmail.com</a>
-          <a
-            href="https://www.linkedin.com/in/shevvy/"
-            target="_blank"
-            rel="noopener"
-          >
+          <a href="https://www.linkedin.com/in/shevvy/" target="_blank" rel="noopener">
             LinkedIn
           </a>
-          <a
-            href="https://github.com/andrei-shevel"
-            target="_blank"
-            rel="noopener"
-          >
+          <a href="https://github.com/andrei-shevel" target="_blank" rel="noopener">
             GitHub
           </a>
         </div>

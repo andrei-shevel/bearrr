@@ -1,20 +1,16 @@
-import type { Metadata } from "next";
-import Image from "next/image";
-import { CSSProperties } from "react";
-import { format } from "date-fns";
+import type { Metadata } from 'next';
+import Image from 'next/image';
+import { CSSProperties } from 'react';
+import { format } from 'date-fns';
 
-import cv from "@/data/cv.json" with { type: "json" };
-import { getYearsOfExperience } from "@/lib/utils";
+import cv from '@/data/cv.json' with { type: 'json' };
+import { getYearsOfExperience } from '@/lib/utils';
 
 export const metadata: Metadata = {
-  title: "Software Engineer",
+  title: 'Software Engineer',
   description:
-    "Software Engineer specializing in frontend architecture, legacy modernization, and team velocity optimization.",
-  keywords: [
-    "Software Engineer",
-    "Tech Lead",
-    "Frontend Developer",
-  ],
+    'Software Engineer specializing in frontend architecture, legacy modernization, and team velocity optimization.',
+  keywords: ['Software Engineer', 'Tech Lead', 'Frontend Developer'],
 };
 
 export default function Home() {
@@ -28,28 +24,18 @@ export default function Home() {
           </div>
           <h1 className="hero-title">
             <span className="title-line">I turn chaos</span>
-            <span className="title-line title-highlight">
-              into architecture
-            </span>
+            <span className="title-line title-highlight">into architecture</span>
             <span className="title-line">that scales.</span>
           </h1>
           <p className="hero-subtitle">
-            {getYearsOfExperience()}+ years of making teams faster. I lead
-            frontend architecture, eliminate technical debt at scale, and build
-            systems that compound velocity over time.{" "}
+            {getYearsOfExperience()}+ years of making teams faster. I lead frontend architecture, eliminate technical
+            debt at scale, and build systems that compound velocity over time.{' '}
             <span className="highlight">Force multiplier by design.</span>
           </p>
           <div className="hero-actions">
             <a href="#work" className="btn btn-primary">
               <span>See My Impact</span>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M7 17L17 7M17 7H7M17 7V17" />
               </svg>
             </a>
@@ -70,37 +56,30 @@ export default function Home() {
             </div>
             <pre className="window-code">
               <code>
-                <span className="code-keyword">export const</span>{" "}
-                <span className="code-var">engineer</span>
-                {" = {\n"}
-                {"  "}
-                <span className="code-prop">name</span>:{" "}
-                <span className="code-string">"Andrei Shevel"</span>,{"\n"}
-                {"  "}
-                <span className="code-prop">role</span>:{" "}
-                <span className="code-string">"Software Engineer"</span>,{"\n"}
-                {"  "}
-                <span className="code-prop">location</span>:{" "}
-                <span className="code-string">"Warsaw, Poland"</span>,{"\n"}
-                {"  "}
-                <span className="code-prop">focus</span>: [{"\n"}
-                {"    "}
-                <span className="code-string">"Architecture"</span>,{"\n"}
-                {"    "}
-                <span className="code-string">"Legacy Modernization"</span>,
-                {"\n"}
-                {"    "}
+                <span className="code-keyword">export const</span> <span className="code-var">engineer</span>
+                {' = {\n'}
+                {'  '}
+                <span className="code-prop">name</span>: <span className="code-string">"Andrei Shevel"</span>,{'\n'}
+                {'  '}
+                <span className="code-prop">role</span>: <span className="code-string">"Software Engineer"</span>,{'\n'}
+                {'  '}
+                <span className="code-prop">location</span>: <span className="code-string">"Warsaw, Poland"</span>,
+                {'\n'}
+                {'  '}
+                <span className="code-prop">focus</span>: [{'\n'}
+                {'    '}
+                <span className="code-string">"Architecture"</span>,{'\n'}
+                {'    '}
+                <span className="code-string">"Legacy Modernization"</span>,{'\n'}
+                {'    '}
                 <span className="code-string">"Team Velocity"</span>
-                {"\n"}
-                {"  "}],{"\n"}
-                {"  "}
-                <span className="code-prop">principle</span>:{" "}
-                <span className="code-string">
-                  "Ship code that{"\n    "}makes others faster"
-                </span>
-                {"\n"}
-                {"}"} <span className="code-keyword">satisfies</span>{" "}
-                <span className="code-var">Engineer</span>;
+                {'\n'}
+                {'  '}],{'\n'}
+                {'  '}
+                <span className="code-prop">principle</span>:{' '}
+                <span className="code-string">"Ship code that{'\n    '}makes others faster"</span>
+                {'\n'}
+                {'}'} <span className="code-keyword">satisfies</span> <span className="code-var">Engineer</span>;
               </code>
             </pre>
           </div>
@@ -119,16 +98,8 @@ export default function Home() {
               return (
                 <article key={experience.company} className="project-card">
                   <div className="project-image">
-                    <div
-                      className="project-placeholder"
-                      style={{ "--hue": index ? 320 : 180 } as CSSProperties}
-                    >
-                      <Image
-                        src={experience.impact.image}
-                        alt={experience.company}
-                        width={100}
-                        height={100}
-                      />
+                    <div className="project-placeholder" style={{ '--hue': index ? 320 : 180 } as CSSProperties}>
+                      <Image src={experience.impact.image} alt={experience.company} width={100} height={100} />
                     </div>
                   </div>
                   <div className="project-content">
@@ -138,15 +109,10 @@ export default function Home() {
                       ))}
                     </div>
                     <h3 className="project-title">{experience.impact.title}</h3>
-                    <p className="project-desc">
-                      {experience.impact.description}
-                    </p>
+                    <p className="project-desc">{experience.impact.description}</p>
                     <span className="project-link">
-                      {experience.company} ·{" "}
-                      {format(new Date(experience.startDate), "MMM yyyy")} –{" "}
-                      {experience.endDate
-                        ? format(new Date(experience.endDate), "MMM yyyy")
-                        : "Present"}
+                      {experience.company} · {format(new Date(experience.startDate), 'MMM yyyy')} –{' '}
+                      {experience.endDate ? format(new Date(experience.endDate), 'MMM yyyy') : 'Present'}
                     </span>
                   </div>
                 </article>
@@ -168,19 +134,15 @@ export default function Home() {
           </div>
           <div className="about-text">
             <p>
-              I'm not just a developer—I'm a{" "}
-              <span className="highlight">technical strategist</span> who
-              bridges architecture decisions with business outcomes. My focus is
-              on
-              <span className="highlight">sustainable practices</span>:
-              migrations, modularization, and component systems that compound
-              team velocity over time.
+              I'm not just a developer—I'm a <span className="highlight">technical strategist</span> who bridges
+              architecture decisions with business outcomes. My focus is on
+              <span className="highlight">sustainable practices</span>: migrations, modularization, and component
+              systems that compound team velocity over time.
             </p>
             <p>
-              I've spent 14 years learning that the hardest problems aren't
-              technical—they're organizational. Legacy code, circular
-              dependencies, and tech debt are symptoms. The cure is architecture
-              that serves humans, not just machines.
+              I've spent 14 years learning that the hardest problems aren't technical—they're organizational. Legacy
+              code, circular dependencies, and tech debt are symptoms. The cure is architecture that serves humans, not
+              just machines.
             </p>
           </div>
           <div className="skills-grid">
@@ -212,14 +174,7 @@ export default function Home() {
         </div>
         <div className="about-image">
           <div className="image-frame">
-            <Image
-              className="avatar-photo"
-              src="/photo.png"
-              alt="Andrei Shevel"
-              width={500}
-              height={500}
-              priority
-            />
+            <Image className="avatar-photo" src="/photo.png" alt="Andrei Shevel" width={500} height={500} priority />
             <div className="image-decoration"></div>
           </div>
         </div>
@@ -236,23 +191,12 @@ export default function Home() {
             </h2>
           </div>
           <p className="contact-text">
-            I'm always interested in conversations about frontend architecture,
-            team scaling, and legacy modernization. Whether you're facing a
-            technical challenge or just want to exchange ideas—reach out.
+            I'm always interested in conversations about frontend architecture, team scaling, and legacy modernization.
+            Whether you're facing a technical challenge or just want to exchange ideas—reach out.
           </p>
-          <a
-            href="mailto:sendtoshevvy@gmail.com"
-            className="btn btn-primary btn-large"
-          >
+          <a href="mailto:sendtoshevvy@gmail.com" className="btn btn-primary btn-large">
             <span>sendtoshevvy@gmail.com</span>
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M7 17L17 7M17 7H7M17 7V17" />
             </svg>
           </a>

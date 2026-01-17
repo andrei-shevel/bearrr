@@ -1,40 +1,37 @@
-import type { ReactNode } from "react";
-import type { Metadata } from "next";
-import { Syne } from "next/font/google";
+import type { ReactNode } from 'react';
+import type { Metadata } from 'next';
+import { Syne } from 'next/font/google';
 
-import { Header } from "@/components/Header";
-import { Analytics } from "@/components/Analytics";
+import { Header } from '@/components/Header';
+import { Analytics } from '@/components/Analytics';
 
-import "./globals.css";
+import './globals.css';
 
 const syne = Syne({
-  variable: "--font-syne",
-  subsets: ["latin"],
+  variable: '--font-syne',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.SITE_URL!),
   title: {
-    default: "Software Engineer | Andrei Shevel",
-    template: "%s | Andrei Shevel",
+    default: 'Software Engineer | Andrei Shevel',
+    template: '%s | Andrei Shevel',
   },
   description:
-    "Software Engineer specializing in frontend architecture, legacy modernization, and team velocity optimization.",
+    'Software Engineer specializing in frontend architecture, legacy modernization, and team velocity optimization.',
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    title: "Andrei Shevel — Software Engineer",
-    description:
-      "I turn chaos into architecture that scales.",
-    siteName: "Andrei Shevel",
+    type: 'website',
+    locale: 'en_US',
+    title: 'Andrei Shevel — Software Engineer',
+    description: 'I turn chaos into architecture that scales.',
+    siteName: 'Andrei Shevel',
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Andrei Shevel — Software Engineer",
-    description:
-      "I turn chaos into architecture that scales.",
+    card: 'summary_large_image',
+    title: 'Andrei Shevel — Software Engineer',
+    description: 'I turn chaos into architecture that scales.',
   },
-  
 };
 
 export default function RootLayout({
@@ -54,18 +51,9 @@ export default function RootLayout({
         <main>{children}</main>
         <footer className="footer">
           <div className="footer-content">
-            <span>
-              © {new Date().getFullYear()} Andrei Shevel. Built with passion.
-            </span>
+            <span>© {new Date().getFullYear()} Andrei Shevel. Built with passion.</span>
             <span className="footer-location">
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-              >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                 <circle cx="12" cy="10" r="3" />
               </svg>
