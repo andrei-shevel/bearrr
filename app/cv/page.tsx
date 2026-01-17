@@ -1,9 +1,22 @@
+import type { Metadata } from "next";
 import { format } from "date-fns";
 
 import cv from "@/data/cv.json" with { type: "json" };
 import { getYearsOfExperience } from "@/lib/utils";
 
 import "./style.css";
+
+export const metadata: Metadata = {
+  title: "CV",
+  description:
+    "Professional experience, technical skills, and education of Andrei Shevel.",
+  keywords: [
+    "Andrei Shevel CV",
+    "Software Engineer",
+    "Tech Lead",
+    "Frontend Developer",
+  ],
+};
 
 export default function CV() {
   return (

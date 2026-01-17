@@ -12,7 +12,28 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: "Andrei Shevel — Software Engineer",
+  metadataBase: new URL(process.env.SITE_URL!),
+  title: {
+    default: "Software Engineer | Andrei Shevel",
+    template: "%s | Andrei Shevel",
+  },
+  description:
+    "Software Engineer specializing in frontend architecture, legacy modernization, and team velocity optimization.",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    title: "Andrei Shevel — Software Engineer",
+    description:
+      "I turn chaos into architecture that scales.",
+    siteName: "Andrei Shevel",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Andrei Shevel — Software Engineer",
+    description:
+      "I turn chaos into architecture that scales.",
+  },
+  
 };
 
 export default function RootLayout({

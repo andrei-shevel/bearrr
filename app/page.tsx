@@ -1,9 +1,21 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { CSSProperties } from "react";
 import { format } from "date-fns";
 
 import cv from "@/data/cv.json" with { type: "json" };
 import { getYearsOfExperience } from "@/lib/utils";
+
+export const metadata: Metadata = {
+  title: "Software Engineer",
+  description:
+    "Software Engineer specializing in frontend architecture, legacy modernization, and team velocity optimization.",
+  keywords: [
+    "Software Engineer",
+    "Tech Lead",
+    "Frontend Developer",
+  ],
+};
 
 export default function Home() {
   return (
