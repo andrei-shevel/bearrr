@@ -1,0 +1,103 @@
+{
+  "skills": {
+    "Core": ["TypeScript", "JavaScript", "HTML", "CSS", "SASS"],
+    "Frontend": ["React", "Monorepo", "Webpack / Vite", "Component Systems"],
+    "Backend": ["Node.js", "Ruby on Rails", "MongoDB"],
+    "Platform": ["AWS", "Docker", "CI/CD"],
+    "Practices": ["TDD", "Jest", "Architecture"]
+  },
+  "focus": [
+    "Architecture & Tech Strategy",
+    "Legacy Modernization",
+    "Cross-team Collaboration",
+    "Team Building & Mentorship"
+  ],
+  "experience": [
+    {
+      "company": "Apollo.io",
+      "location": "Warsaw, Poland",
+      "position": "Senior Frontend Developer",
+      "startDate": "2024-06-01",
+      "description": [
+        "Technical lead for modularization initiative—defined architecture vision, drove org-wide adoption of monorepo structure",
+        "Established frontend platform standards: eslint config, TypeScript patterns, and package isolation strategies",
+        "Led codebase modernization at scale",
+        "Reduced technical debt, unblocked teams, and improved build reliability",
+        "Designed and implemented performance observability system enabling proactive regression detection across teams",
+        "Drove react-router migration strategy—created proxy component patterns adopted org-wide",
+        "Active member of Frontend Strategy Group, influencing technical direction and architectural decisions"
+      ],
+      "impact": {
+        "tags": ["Architecture", "Strategy", "Scale"],
+        "image": "/impact/apollo.svg",
+        "title": "Frontend Platform Transformation",
+        "description": "Technical lead for a company-wide frontend modernization. Defined the architecture vision, built consensus across teams, and shipped a modular foundation that unblocked parallel development and cut build times significantly."
+      }
+    },
+    {
+      "company": "INDY",
+      "location": "Warsaw, Poland",
+      "position": "Director of Engineering",
+      "startDate": "2016-02-01",
+      "endDate": "2024-06-01",
+      "description": [
+        "Progressed Senior Developer → Frontend Lead → Director, building and scaling the engineering organization",
+        "Architected and executed TypeScript migration across the entire frontend codebase, improving DX and reducing runtime errors",
+        "Built frontend component library adopted across all product teams, accelerating feature development",
+        "Designed AWS infrastructure for frontend deployments—CI/CD pipelines, CDN configuration, and monitoring",
+        "Led cross-functional initiative to resolve critical domain blocking issue, restoring service availability",
+        "Transitioned to backend team to unblock delivery and developed comprehensive migration plan for legacy codebase",
+        "Owned technical roadmap, architecture reviews, and engineering hiring process"
+      ],
+      "impact": {
+        "tags": ["Leadership", "Growth"],
+        "image": "/impact/indy.svg",
+        "title": "Engineering Org from Zero to Scale",
+        "description": "Grew from Senior Developer to Director of Engineering over 8 years. Built the engineering organization, owned technical roadmap, led architecture reviews, and established the hiring process."
+      }
+    },
+    {
+      "company": "Itransition",
+      "position": "Software Engineer → Team Lead",
+      "location": "Grodno, Belarus",
+      "startDate": "2012-03-01",
+      "endDate": "2016-08-01",
+      "description": [
+        "Grew from junior developer to team lead over 4 years, shipping frontend, backend, and mobile solutions",
+        "Established team education program—structured code reviews, knowledge sharing sessions, and onboarding processes",
+        "Served as primary technical point of contact for enterprise clients, managing requirements and delivery",
+        "Developed expertise across full stack: frontend interfaces, backend APIs, and mobile applications"
+      ]
+    },
+    {
+      "company": "Different clients",
+      "position": "Full Stack Developer",
+      "startDate": "2009-06-01",
+      "endDate": "2012-03-01",
+      "description": [
+        "Delivered end-to-end web solutions—from requirements gathering to deployment and maintenance",
+        "Handled design adaptation for web, translating visual designs into responsive implementations",
+        "Managed direct client relationships"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Yanka Kupala State University",
+      "degree": "BSc Applied Mathematics",
+      "location": "Grodno, Belarus",
+      "startDate": "2004-09-01",
+      "endDate": "2009-06-01"
+    }
+  ],
+  "languages": [
+    {
+      "name": "English",
+      "level": "Professional"
+    },
+    {
+      "name": "Russian",
+      "level": "Native"
+    }
+  ]
+}

@@ -93,62 +93,6 @@ body {
   75% { transform: translate(-30px, 40px) scale(1.02); }
 }
 
-/* ===== Navigation ===== */
-.nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 4rem;
-  z-index: 100;
-  background: linear-gradient(to bottom, var(--bg-primary), transparent);
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  text-decoration: none;
-  color: var(--text-primary);
-  letter-spacing: -0.02em;
-}
-
-.logo-dot {
-  color: var(--accent-primary);
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: var(--text-primary);
-}
-
-.nav-cta {
-  padding: 0.6rem 1.25rem;
-  background: var(--bg-tertiary);
-  border-radius: 100px;
-  border: 1px solid var(--border-color);
-}
-
-.nav-cta:hover {
-  background: var(--bg-card);
-  border-color: var(--accent-primary);
-}
-
 /* ===== Hero Section ===== */
 .hero {
   min-height: 100vh;
@@ -472,11 +416,12 @@ body {
   align-items: center;
   justify-content: center;
   color: hsl(var(--hue), 60%, 50%);
+
 }
 
-.project-pattern {
+.project-placeholder > img {
   width: 100%;
-  height: 100%;
+  height: 100%;  
 }
 
 .project-content {
@@ -770,18 +715,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .nav {
-    padding: 1rem 1.5rem;
-  }
-
-  .nav-links {
-    gap: 1.5rem;
-  }
-
-  .nav-links a:not(.nav-cta) {
-    display: none;
-  }
-
   .hero {
     padding: 5rem 1.5rem 2rem;
   }

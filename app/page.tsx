@@ -1,4 +1,9 @@
 import Image from "next/image";
+import { CSSProperties } from "react";
+import { format } from "date-fns";
+
+import cv from "@/data/cv.json" with { type: "json" };
+import { getYearsOfExperience } from "@/lib/utils";
 
 export default function Home() {
   return (
@@ -17,9 +22,9 @@ export default function Home() {
             <span className="title-line">that scales.</span>
           </h1>
           <p className="hero-subtitle">
-            14 years of making teams faster. I lead frontend architecture,
-            eliminate technical debt at scale, and build systems that compound
-            velocity over time.{" "}
+            {getYearsOfExperience()}+ years of making teams faster. I lead
+            frontend architecture, eliminate technical debt at scale, and build
+            systems that compound velocity over time.{" "}
             <span className="highlight">Force multiplier by design.</span>
           </p>
           <div className="hero-actions">
@@ -61,7 +66,7 @@ export default function Home() {
                 <span className="code-string">"Andrei Shevel"</span>,{"\n"}
                 {"  "}
                 <span className="code-prop">role</span>:{" "}
-                <span className="code-string">"Staff Frontend"</span>,{"\n"}
+                <span className="code-string">"Software Engineer"</span>,{"\n"}
                 {"  "}
                 <span className="code-prop">location</span>:{" "}
                 <span className="code-string">"Warsaw, Poland"</span>,{"\n"}
@@ -79,7 +84,7 @@ export default function Home() {
                 {"  "}
                 <span className="code-prop">principle</span>:{" "}
                 <span className="code-string">
-                  "Ship code that makes others faster"
+                  "Ship code that{"\n    "}makes others faster"
                 </span>
                 {"\n"}
                 {"}"} <span className="code-keyword">satisfies</span>{" "}
@@ -97,109 +102,45 @@ export default function Home() {
         </div>
 
         <div className="projects-grid">
-          <article className="project-card">
-            <div className="project-image">
-              <div className="project-placeholder" style={{ "--hue": 180 }}>
-                <svg viewBox="0 0 100 100" className="project-pattern">
-                  <defs>
-                    <pattern
-                      id="grid1"
-                      width="10"
-                      height="10"
-                      patternUnits="userSpaceOnUse"
+          {cv.experience.map((experience, index) => {
+            if (experience.impact) {
+              return (
+                <article key={experience.company} className="project-card">
+                  <div className="project-image">
+                    <div
+                      className="project-placeholder"
+                      style={{ "--hue": index ? 320 : 180 } as CSSProperties}
                     >
-                      <circle
-                        cx="5"
-                        cy="5"
-                        r="1"
-                        fill="currentColor"
-                        opacity="0.3"
+                      <Image
+                        src={experience.impact.image}
+                        alt={experience.company}
+                        width={100}
+                        height={100}
                       />
-                    </pattern>
-                  </defs>
-                  <rect width="100" height="100" fill="url(#grid1)" />
-                  <circle
-                    cx="50"
-                    cy="50"
-                    r="25"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="0.5"
-                    opacity="0.5"
-                  />
-                  <circle
-                    cx="50"
-                    cy="50"
-                    r="35"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="0.5"
-                    opacity="0.3"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div className="project-content">
-              <div className="project-tags">
-                <span>Architecture</span>
-                <span>Strategy</span>
-                <span>Scale</span>
-              </div>
-              <h3 className="project-title">
-                Frontend Platform Transformation
-              </h3>
-              <p className="project-desc">
-                Technical lead for a company-wide frontend modernization.
-                Defined the architecture vision, built consensus across teams,
-                and shipped a modular foundation that unblocked parallel
-                development and cut build times significantly.
-              </p>
-              <span className="project-link">Apollo.io · 2024–Present</span>
-            </div>
-          </article>
-
-          <article className="project-card">
-            <div className="project-image">
-              <div className="project-placeholder" style={{ "--hue": 320 }}>
-                <svg viewBox="0 0 100 100" className="project-pattern">
-                  <defs>
-                    <pattern
-                      id="hex1"
-                      width="20"
-                      height="17.32"
-                      patternUnits="userSpaceOnUse"
-                    >
-                      <polygon
-                        points="10,0 20,5.77 20,17.32 10,23.09 0,17.32 0,5.77"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="0.3"
-                        opacity="0.3"
-                        transform="translate(0,-2.88)"
-                      />
-                    </pattern>
-                  </defs>
-                  <rect width="100" height="100" fill="url(#hex1)" />
-                </svg>
-              </div>
-            </div>
-            <div className="project-content">
-              <div className="project-tags">
-                <span>Leadership</span>
-                <span>Growth</span>
-              </div>
-              <h3 className="project-title">
-                Engineering Org from Zero to Scale
-              </h3>
-              <p className="project-desc">
-                Grew from Senior Developer to Director of Engineering over 8
-                years. Built the engineering organization, owned technical
-                roadmap, led architecture reviews, and established the hiring
-                process.
-              </p>
-              <span className="project-link">INDY · 2016–2024</span>
-            </div>
-          </article>
+                    </div>
+                  </div>
+                  <div className="project-content">
+                    <div className="project-tags">
+                      {experience.impact.tags.map((tag) => (
+                        <span key={tag}>{tag}</span>
+                      ))}
+                    </div>
+                    <h3 className="project-title">{experience.impact.title}</h3>
+                    <p className="project-desc">
+                      {experience.impact.description}
+                    </p>
+                    <span className="project-link">
+                      {experience.company} ·{" "}
+                      {format(new Date(experience.startDate), "MMM yyyy")} –{" "}
+                      {experience.endDate
+                        ? format(new Date(experience.endDate), "MMM yyyy")
+                        : "Present"}
+                    </span>
+                  </div>
+                </article>
+              );
+            }
+          })}
         </div>
       </section>
 
@@ -234,28 +175,25 @@ export default function Home() {
             <div className="skill-category">
               <h4>Leadership</h4>
               <ul>
-                <li>Architecture Strategy</li>
-                <li>Legacy Modernization</li>
-                <li>Cross-team Alignment</li>
-                <li>Team Mentorship</li>
+                {cv.focus.map((focus) => (
+                  <li key={focus}>{focus}</li>
+                ))}
               </ul>
             </div>
             <div className="skill-category">
               <h4>Frontend</h4>
               <ul>
-                <li>React / Webpack / Vite</li>
-                <li>TypeScript</li>
-                <li>Component Systems</li>
-                <li>HTML / CSS / SASS</li>
+                {cv.skills.Frontend.map((skill) => (
+                  <li key={skill}>{skill}</li>
+                ))}
               </ul>
             </div>
             <div className="skill-category">
               <h4>Backend</h4>
               <ul>
-                <li>Node.js / NestJS</li>
-                <li>MongoDB</li>
-                <li>AWS / Docker</li>
-                <li>CI/CD Pipelines</li>
+                {cv.skills.Backend.map((skill) => (
+                  <li key={skill}>{skill}</li>
+                ))}
               </ul>
             </div>
           </div>
