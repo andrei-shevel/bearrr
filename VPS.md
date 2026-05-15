@@ -24,6 +24,7 @@ Host bearrr
 ```bash
 ssh root@YOUR_SERVER_IP
 apt update && apt upgrade -y
+apt install -y git
 ```
 
 ## 3. Install Node.js 24
@@ -96,7 +97,7 @@ sudo -u nextjs git clone git@github.com:andrei-shevel/bearrr.git /home/nextjs/be
 
 ```bash
 certbot --nginx -d bearrr.io -d www.bearrr.io \
-  --non-interactive --agree-tos -m admin@bearrr.io \
+  --non-interactive --agree-tos -m sendtoshevvy@gmail.com \
   --redirect
 ```
 
