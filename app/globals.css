@@ -76,7 +76,6 @@ body {
   background: var(--accent-primary);
   top: -200px;
   right: -200px;
-  animation: float 20s ease-in-out infinite;
 }
 
 .orb-2 {
@@ -85,23 +84,6 @@ body {
   background: var(--accent-secondary);
   bottom: -150px;
   left: -150px;
-  animation: float 25s ease-in-out infinite reverse;
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  25% {
-    transform: translate(50px, 30px) scale(1.05);
-  }
-  50% {
-    transform: translate(20px, -20px) scale(0.95);
-  }
-  75% {
-    transform: translate(-30px, 40px) scale(1.02);
-  }
 }
 
 /* ===== Hero Section ===== */
@@ -119,7 +101,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  animation: fadeInUp 0.8s var(--ease-out-expo) 0.1s both;
 }
 
 .hero-location {
@@ -146,19 +127,6 @@ body {
   height: 8px;
   background: var(--accent-primary);
   border-radius: 50%;
-  animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.5;
-    transform: scale(0.8);
-  }
 }
 
 .hero-title {
@@ -175,17 +143,6 @@ body {
 
 .title-line {
   display: block;
-  animation: fadeInUp 0.8s var(--ease-out-expo) both;
-}
-
-.title-line:nth-child(1) {
-  animation-delay: 0.3s;
-}
-.title-line:nth-child(2) {
-  animation-delay: 0.4s;
-}
-.title-line:nth-child(3) {
-  animation-delay: 0.5s;
 }
 
 .title-highlight {
@@ -202,7 +159,6 @@ body {
   gap: 4rem;
   padding-top: 2rem;
   border-top: 1px solid var(--border-subtle);
-  animation: fadeInUp 0.8s var(--ease-out-expo) 0.6s both;
 }
 
 .hero-subtitle {
@@ -221,17 +177,6 @@ body {
   display: flex;
   gap: 1rem;
   flex-shrink: 0;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* ===== Buttons ===== */
@@ -286,19 +231,6 @@ body {
 }
 
 /* ===== Code Window ===== */
-.hero-visual {
-  animation: fadeIn 1s var(--ease-out-expo) 0.8s both;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .code-window {
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
