@@ -1,0 +1,18 @@
+.cv-education {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.cv-education h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .cv-education {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

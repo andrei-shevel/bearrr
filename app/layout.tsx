@@ -4,6 +4,7 @@ import { Syne } from 'next/font/google';
 
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
+import { GradientOrbs } from '@/components/layout/GradientOrbs';
 import { ConsoleGreeting } from '@/components/ConsoleGreeting';
 
 import './globals.css';
@@ -44,8 +45,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${syne.variable} antialiased`}>
         <div className="noise" />
-        <div className="gradient-orb orb-1" />
-        <div className="gradient-orb orb-2" />
+        <GradientOrbs />
 
         <ConsoleGreeting />
         <Header />

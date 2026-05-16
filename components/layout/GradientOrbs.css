@@ -1,0 +1,24 @@
+.gradient-orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.orb-1 {
+  width: 600px;
+  height: 600px;
+  background: var(--accent-primary);
+  top: -200px;
+  right: -200px;
+}
+
+.orb-2 {
+  width: 500px;
+  height: 500px;
+  background: var(--accent-secondary);
+  bottom: -150px;
+  left: -150px;
+}

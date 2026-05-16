@@ -4,47 +4,6 @@
   padding: 8rem 2rem 4rem;
 }
 
-/* Header */
-.cv-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.cv-header h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.02em;
-}
-
-.cv-title {
-  font-size: 1.25rem;
-  color: var(--accent-primary);
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-
-.cv-meta {
-  display: flex;
-  gap: 1.5rem;
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-}
-
-.cv-meta span {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.cv-meta svg {
-  opacity: 0.7;
-}
-
 .print-btn {
   display: flex;
   align-items: center;
@@ -52,7 +11,7 @@
   white-space: nowrap;
 }
 
-/* Sections */
+/* Shared section primitives */
 .cv-section {
   margin-bottom: 2.5rem;
 }
@@ -66,38 +25,7 @@
   margin-bottom: 1.5rem;
 }
 
-/* Profile */
-.cv-profile {
-  font-size: 1.05rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
-}
-
-/* Jobs */
-.cv-job {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.cv-job:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.cv-job-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1rem;
-}
-
-.cv-job h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-}
-
+/* Shared inline meta used by Experience + Education */
 .cv-company {
   color: var(--text-secondary);
   font-size: 0.95rem;
@@ -110,112 +38,7 @@
   white-space: nowrap;
 }
 
-.cv-list {
-  list-style: none;
-  padding: 0;
-}
-
-.cv-list li {
-  position: relative;
-  padding-left: 1.25rem;
-  margin-bottom: 0.5rem;
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.cv-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.6em;
-  width: 6px;
-  height: 6px;
-  background: var(--accent-primary);
-  border-radius: 50%;
-  opacity: 0.6;
-}
-
-/* Skills */
-.cv-skills {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1.5rem;
-}
-
-.cv-skill-group h4 {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 0.5rem;
-}
-
-.cv-skill-group p {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-/* Tags */
-.cv-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.cv-tags span {
-  padding: 0.5rem 1rem;
-  background: var(--bg-tertiary);
-  border: 1px solid var(--border-color);
-  border-radius: 100px;
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-}
-
-/* Education */
-.cv-education {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.cv-education h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-}
-
-/* Languages */
-.cv-languages {
-  display: flex;
-  gap: 2rem;
-  color: var(--text-secondary);
-}
-
-/* Contact */
-.cv-contact {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--border-color);
-}
-
-.cv-contact-links {
-  display: flex;
-  gap: 2rem;
-}
-
-.cv-contact-links a {
-  color: var(--accent-primary);
-  text-decoration: none;
-  font-weight: 500;
-  transition: opacity 0.2s;
-}
-
-.cv-contact-links a:hover {
-  opacity: 0.8;
-}
-
-/* ===== Print Styles ===== */
+/* ===== Print Styles (page-wide) ===== */
 @media print {
   @page {
     margin: 1.5cm;
@@ -238,43 +61,8 @@
     max-width: none;
   }
 
-  .cv-header {
-    border-bottom-color: #e5e5e5;
-  }
-
-  .cv-header h1 {
-    font-size: 2rem;
-  }
-
-  .cv-title {
-    color: #0a0a0a;
-  }
-
   .cv-section-title {
     color: #1a1a1a;
-  }
-
-  .cv-job {
-    border-bottom-color: #e5e5e5;
-  }
-
-  .cv-list li::before {
-    background: #1a1a1a;
-  }
-
-  .cv-tags span {
-    background: #f5f5f5;
-    border-color: #e5e5e5;
-    color: #1a1a1a;
-  }
-
-  .cv-contact-links a {
-    color: #1a1a1a;
-  }
-
-  /* Avoid page breaks in awkward places */
-  .cv-job {
-    page-break-inside: avoid;
   }
 
   .cv-section {
@@ -286,34 +74,5 @@
 @media (max-width: 768px) {
   .cv-main {
     padding: 6rem 1.5rem 3rem;
-  }
-
-  .cv-header {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .cv-header h1 {
-    font-size: 2rem;
-  }
-
-  .cv-meta {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .cv-job-header {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .cv-education {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .cv-contact-links {
-    flex-direction: column;
-    gap: 1rem;
   }
 }

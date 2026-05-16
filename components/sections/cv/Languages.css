@@ -1,0 +1,5 @@
+.cv-languages {
+  display: flex;
+  gap: 2rem;
+  color: var(--text-secondary);
+}
