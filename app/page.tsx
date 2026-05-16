@@ -17,16 +17,21 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <div className="hero-content">
+        <div className="hero-eyebrow">
           <div className="hero-tag">
             <span className="tag-dot"></span>
             Software Engineer
           </div>
-          <h1 className="hero-title">
-            <span className="title-line">I turn chaos</span>
-            <span className="title-line title-highlight">into architecture</span>
-            <span className="title-line">that scales.</span>
-          </h1>
+          <span className="hero-location">Warsaw, Poland</span>
+        </div>
+
+        <h1 className="hero-title">
+          <span className="title-line">I turn chaos</span>
+          <span className="title-line title-highlight">into architecture</span>
+          <span className="title-line">that scales.</span>
+        </h1>
+
+        <div className="hero-bottom">
           <p className="hero-subtitle">
             {getYearsOfExperience()}+ years of making teams faster. I lead frontend architecture, eliminate technical
             debt at scale, and build systems that compound velocity over time.{' '}
@@ -42,46 +47,6 @@ export default function Home() {
             <a href="#contact" className="btn btn-ghost">
               Get in Touch
             </a>
-          </div>
-        </div>
-        <div className="hero-visual">
-          <div className="code-window">
-            <div className="window-header">
-              <div className="window-dots">
-                <span />
-                <span />
-                <span />
-              </div>
-              <span className="window-title">andrei.config.ts</span>
-            </div>
-            <pre className="window-code">
-              <code>
-                <span className="code-keyword">export const</span> <span className="code-var">engineer</span>
-                {' = {\n'}
-                {'  '}
-                <span className="code-prop">name</span>: <span className="code-string">"Andrei Shevel"</span>,{'\n'}
-                {'  '}
-                <span className="code-prop">role</span>: <span className="code-string">"Software Engineer"</span>,{'\n'}
-                {'  '}
-                <span className="code-prop">location</span>: <span className="code-string">"Warsaw, Poland"</span>,
-                {'\n'}
-                {'  '}
-                <span className="code-prop">focus</span>: [{'\n'}
-                {'    '}
-                <span className="code-string">"Architecture"</span>,{'\n'}
-                {'    '}
-                <span className="code-string">"Legacy Modernization"</span>,{'\n'}
-                {'    '}
-                <span className="code-string">"Team Velocity"</span>
-                {'\n'}
-                {'  '}],{'\n'}
-                {'  '}
-                <span className="code-prop">principle</span>:{' '}
-                <span className="code-string">"Ship code that{'\n    '}makes others faster"</span>
-                {'\n'}
-                {'}'} <span className="code-keyword">satisfies</span> <span className="code-var">Engineer</span>;
-              </code>
-            </pre>
           </div>
         </div>
       </section>

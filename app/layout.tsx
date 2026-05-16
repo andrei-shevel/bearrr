@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import { Syne } from 'next/font/google';
 
 import { Header } from '@/components/Header';
-import { Analytics } from '@/components/Analytics';
 import { ConsoleGreeting } from '@/components/ConsoleGreeting';
 
 import './globals.css';
@@ -47,7 +46,6 @@ export default function RootLayout({
         <div className="gradient-orb orb-1" />
         <div className="gradient-orb orb-2" />
 
-        <Analytics />
         <ConsoleGreeting />
         <Header />
         <main>{children}</main>
