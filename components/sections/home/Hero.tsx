@@ -1,3 +1,5 @@
+import { LocalTime } from '@/components/LocalTime';
+
 import { getYearsOfExperience } from '@/lib/utils';
 
 import './Hero.css';
@@ -10,7 +12,10 @@ export function Hero() {
           <span className="tag-dot"></span>
           Software Engineer
         </div>
-        <span className="hero-location">Warsaw, Poland</span>
+        <div className="hero-meta">
+          <span className="hero-location">Warsaw, Poland</span>
+          <LocalTime className="hero-time" />
+        </div>
       </div>
 
       <h1 className="hero-title">
