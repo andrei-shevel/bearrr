@@ -18,6 +18,7 @@
       "location": "Warsaw, Poland",
       "position": "Senior Frontend Developer",
       "startDate": "2024-06-01",
+      "endDate": "2026-06-30",
       "description": [
         "Technical lead for modularization initiative—defined architecture vision, drove org-wide adoption of monorepo structure",
         "Established frontend platform standards: eslint config, TypeScript patterns, and package isolation strategies",
