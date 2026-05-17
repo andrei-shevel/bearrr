@@ -6,7 +6,6 @@ import { About } from '@/components/sections/home/About';
 import { Contact } from '@/components/sections/home/Contact';
 
 export const metadata: Metadata = {
-  title: 'Software Engineer',
   description:
     'Software Engineer specializing in frontend architecture, legacy modernization, and team velocity optimization.',
   keywords: ['Software Engineer', 'Tech Lead', 'Frontend Developer'],
