@@ -6,7 +6,6 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { GradientOrbs } from '@/components/layout/GradientOrbs';
 import { ConsoleGreeting } from '@/components/ConsoleGreeting';
-import { HashNormalize } from '@/components/layout/HashNormalize';
 
 import './globals.css';
 
@@ -45,12 +44,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${syne.variable} antialiased`}>
-        <ConsoleGreeting />
-        <HashNormalize />
-
         <div className="noise" />
         <GradientOrbs />
 
+        <ConsoleGreeting />
         <Header />
         <main>{children}</main>
         <Footer />
