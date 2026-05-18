@@ -24,16 +24,12 @@ Host bearrr
 ```bash
 ssh root@YOUR_SERVER_IP
 apt update && apt upgrade -y
-apt install -y git
+apt install -y git ca-certificates curl
 ```
 
-## 3. Install Node.js 24
+## 3. Install Docker Engine and Compose
 
-```bash
-curl -fsSL https://deb.nodesource.com/setup_24.x | bash -
-apt-get install -y nodejs
-node -v  # should print v24.x.x
-```
+Follow [Install Docker Engine on Debian](https://docs.docker.com/engine/install/debian/) on the VPS (root shell). Use Docker’s `apt` repository and install **`docker-ce`**, **`docker-ce-cli`**, **`containerd.io`**, **`docker-buildx-plugin`**, and **`docker-compose-plugin`** so you have both the Engine and **`docker compose`** (Compose v2). Enable the `docker` service with systemd if the doc’s install does not already. Confirm `docker` and `docker compose` work before continuing.
 
 ## 4. Create the app user
 
@@ -41,32 +37,14 @@ node -v  # should print v24.x.x
 useradd -m -s /bin/bash nextjs
 ```
 
-## 5. Install pnpm & pm2 for the app user
-
-```bash
-su - nextjs
-
-# configure a user-local npm prefix to avoid permission errors
-mkdir -p ~/.npm-global
-npm config set prefix ~/.npm-global
-echo 'export PATH="$HOME/.npm-global/bin:$PATH"' >> ~/.bashrc
-source ~/.bashrc
-
-npm install -g pnpm pm2
-exit
-
-# enable pm2 autostart on reboot (run the printed command as root)
-sudo env PATH=$PATH:/home/nextjs/.npm-global/bin pm2 startup systemd -u nextjs --hp /home/nextjs
-```
-
-## 6. Install nginx & certbot
+## 5. Install nginx & certbot
 
 ```bash
 apt-get install -y nginx certbot python3-certbot-nginx
 systemctl enable --now nginx
 ```
 
-## 7. DNS
+## 6. DNS
 
 Point both records to your server IP before running certbot:
 
@@ -75,7 +53,7 @@ Point both records to your server IP before running certbot:
 | A    | bearrr.io     | YOUR_SERVER_IP |
 | A    | www.bearrr.io | YOUR_SERVER_IP |
 
-## 8. Generate SSH Key for the app user
+## 7. Generate SSH Key for the app user
 
 ```bash
 su - nextjs
@@ -87,13 +65,13 @@ exit
 Copy the printed public key and add it to GitHub:
 **Settings → SSH and GPG keys → New SSH key**
 
-## 9. Clone the Repository
+## 8. Clone the Repository
 
 ```bash
 sudo -u nextjs git clone git@github.com:andrei-shevel/bearrr.git /home/nextjs/bearrr
 ```
 
-## 10. Obtain SSL Certificate
+## 9. Obtain SSL Certificate
 
 ```bash
 certbot --nginx -d bearrr.io -d www.bearrr.io \
@@ -107,24 +85,33 @@ Certbot auto-renews via a systemd timer — verify it:
 systemctl status certbot.timer
 ```
 
-## 11. First Deploy
+## 10. First Deploy
 
-Back on your local machine:
+On your local machine, set `SITE_URL`, `HOST`, `REMOTE`, and `RUN_USER` in `.env` (see `.env.example`), then:
 
 ```bash
 ./deploy.sh
 ```
+
+`deploy.sh` pulls on the server, reloads nginx, and runs `docker compose up -d --build` in `REMOTE`.
 
 ---
 
 ## Useful Commands
 
 ```bash
-pm2 logs bearrr        # live logs
-pm2 status             # process list
-pm2 restart bearrr     # restart app
-pm2 stop bearrr        # stop app
+# On the VPS (as root), from the app directory:
+sudo -u nextjs -s
+cd /home/nextjs/bearrr
+
+docker compose ps
+docker compose logs -f web
+docker compose restart web
+docker compose down    # stop stack; data in DB volumes (if any) is separate
+
 journalctl -u nginx    # nginx logs
 nginx -t               # test nginx config
 certbot renew --dry-run  # test cert renewal
 ```
+
+If the `nextjs` user should run Docker without `sudo`, add them to the `docker` group (`usermod -aG docker nextjs`), log out and back in, and use `docker compose` as that user. The default `deploy.sh` path runs Compose as root over SSH, which does not require the group.

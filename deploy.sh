@@ -17,25 +17,8 @@ ssh $HOST "$(cat <<ENDSSH
   nginx -t
   systemctl reload nginx
 
-  # ── Build & restart as $RUN_USER ─────────────────────────────────────────
-  sudo -u $RUN_USER env \
-    PATH="/home/$RUN_USER/.npm-global/bin:/usr/local/bin:/usr/bin:/bin" \
-    SITE_URL="$SITE_URL" \
-    PORT="$PORT" \
-    bash -c '
-      set -e
-      cd $REMOTE
-      pnpm install --frozen-lockfile
-      pnpm run build
-      cp -r .next/static .next/standalone/.next/static
-      cp -r public .next/standalone/public
-      if pm2 describe $APP > /dev/null 2>&1; then
-        pm2 reload $APP
-      else
-        pm2 start node --name $APP -- .next/standalone/server.js
-        pm2 save
-      fi
-    '
+  # ── Build & run (Docker Compose) ─────────────────────────────────────────
+  cd $REMOTE && SITE_URL="$SITE_URL" PORT="$PORT" docker compose up -d --build
 
   echo "Done."
 ENDSSH

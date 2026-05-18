@@ -1,0 +1,15 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SITE_URL: ${SITE_URL}
+
+    environment:
+      SITE_URL: ${SITE_URL}
+
+    ports:
+      - '127.0.0.1:${PORT:-3000}:3000'
+
+    restart: unless-stopped
