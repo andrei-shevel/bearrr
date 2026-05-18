@@ -3,6 +3,7 @@ import { LocalTime } from '@/components/LocalTime';
 import { getYearsOfExperience } from '@/lib/utils';
 
 import './Hero.css';
+import Link from 'next/link';
 
 export function Hero() {
   return (
@@ -37,9 +38,9 @@ export function Hero() {
               <path d="M7 17L17 7M17 7H7M17 7V17" />
             </svg>
           </a>
-          <a href="#contact" className="btn btn-ghost">
+          <Link href="/contact" className="btn btn-ghost">
             Get in Touch
-          </a>
+          </Link>
         </div>
       </div>
     </section>

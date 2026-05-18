@@ -2,7 +2,7 @@ import './Contact.css';
 
 export function Contact() {
   return (
-    <section id="contact" className="contact">
+    <section className="contact">
       <div className="contact-content">
         <div className="section-header">
           <span className="section-tag">Let’s Connect</span>

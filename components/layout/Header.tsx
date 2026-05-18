@@ -44,11 +44,9 @@ export function Header() {
 
       {/* Desktop Navigation */}
       <div className="nav-links">
-        <Link href="/#work">Impact</Link>
-        <Link href="/#about">Philosophy</Link>
         <Link href="/cv">CV</Link>
         <Link href="/projects">Projects</Link>
-        <Link href="/#contact" className="nav-cta">
+        <Link href="/contact" className="nav-cta">
           Let’s Talk
         </Link>
       </div>
@@ -68,19 +66,13 @@ export function Header() {
       {/* Mobile Menu Overlay */}
       <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-links">
-          <Link href="/#work" onClick={handleLinkClick}>
-            Impact
-          </Link>
-          <Link href="/#about" onClick={handleLinkClick}>
-            Philosophy
-          </Link>
           <Link href="/cv" onClick={handleLinkClick}>
             CV
           </Link>
           <Link href="/projects" onClick={handleLinkClick}>
             Projects
           </Link>
-          <Link href="/#contact" className="nav-cta" onClick={handleLinkClick}>
+          <Link href="/contact" className="nav-cta" onClick={handleLinkClick}>
             Let’s Talk
           </Link>
         </div>

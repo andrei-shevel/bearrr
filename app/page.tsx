@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import { Hero } from '@/components/sections/home/Hero';
 import { Work } from '@/components/sections/home/Work';
 import { About } from '@/components/sections/home/About';
-import { Contact } from '@/components/sections/home/Contact';
 
 export const metadata: Metadata = {
   description:
@@ -17,7 +16,6 @@ export default function Home() {
       <Hero />
       <Work />
       <About />
-      <Contact />
     </>
   );
 }
