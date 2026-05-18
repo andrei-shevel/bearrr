@@ -23,14 +23,14 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Copy `.env.example` to `.env` and fill in the values:
 
-| Variable   | Description                        |
-| ---------- | ---------------------------------- |
-| `HOST`     | SSH target, e.g. `root@1.2.3.4`   |
-| `REMOTE`   | Deployment path on the server      |
-| `APP`      | pm2 process name                   |
-| `SITE_URL` | Public URL, used for OG metadata   |
-| `RUN_USER` | System user that runs the app      |
-| `PORT`     | Port the Node server listens on    |
+| Variable   | Description                      |
+| ---------- | -------------------------------- |
+| `HOST`     | SSH target, e.g. `root@1.2.3.4`  |
+| `REMOTE`   | Deployment path on the server    |
+| `APP`      | pm2 process name                 |
+| `SITE_URL` | Public URL, used for OG metadata |
+| `RUN_USER` | System user that runs the app    |
+| `PORT`     | Port the Node server listens on  |
 
 ## Deployment
 

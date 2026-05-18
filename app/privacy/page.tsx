@@ -7,7 +7,7 @@ const lastUpdated = 'May 17, 2026';
 export const metadata: Metadata = {
   title: 'Privacy',
   description:
-    "How bearrr.io handles your data. Short version: almost nothing — no cookies, no analytics, no third-party trackers.",
+    'How bearrr.io handles your data. Short version: almost nothing — no cookies, no analytics, no third-party trackers.',
 };
 
 export default function Privacy() {

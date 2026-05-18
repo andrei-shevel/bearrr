@@ -71,7 +71,7 @@ systemctl enable --now nginx
 Point both records to your server IP before running certbot:
 
 | Type | Name          | Value          |
-|------|---------------|----------------|
+| ---- | ------------- | -------------- |
 | A    | bearrr.io     | YOUR_SERVER_IP |
 | A    | www.bearrr.io | YOUR_SERVER_IP |
 
@@ -127,3 +127,4 @@ pm2 stop bearrr        # stop app
 journalctl -u nginx    # nginx logs
 nginx -t               # test nginx config
 certbot renew --dry-run  # test cert renewal
+```

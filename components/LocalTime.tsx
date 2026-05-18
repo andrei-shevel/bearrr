@@ -37,12 +37,7 @@ export function LocalTime({ className }: LocalTimeProps) {
   }, []);
 
   return (
-    <time
-      className={className}
-      dateTime={time}
-      suppressHydrationWarning
-      aria-label="Current local time in Warsaw"
-    >
+    <time className={className} dateTime={time} suppressHydrationWarning aria-label="Current local time in Warsaw">
       {time}
     </time>
   );
