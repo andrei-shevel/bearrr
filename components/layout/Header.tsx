@@ -49,7 +49,7 @@ export function Header() {
         <Link href="/cv">CV</Link>
         <Link href="/projects">Projects</Link>
         <Link href="/#contact" className="nav-cta">
-          Let's Talk
+          Let’s Talk
         </Link>
       </div>
 
@@ -81,7 +81,7 @@ export function Header() {
             Projects
           </Link>
           <Link href="/#contact" className="nav-cta" onClick={handleLinkClick}>
-            Let's Talk
+            Let’s Talk
           </Link>
         </div>
       </div>

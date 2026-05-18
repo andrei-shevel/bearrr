@@ -18,13 +18,13 @@ export function About() {
         </div>
         <div className="about-text">
           <p>
-            I'm not just a developer—I'm a <span className="highlight">technical strategist</span> who bridges
+            I’m not just a developer—I’m a <span className="highlight">technical strategist</span> who bridges
             architecture decisions with business outcomes. My focus is on
             <span className="highlight">sustainable practices</span>: migrations, modularization, and component systems
             that compound team velocity over time.
           </p>
           <p>
-            I've spent 14 years learning that the hardest problems aren't technical—they're organizational. Legacy code,
+            I’ve spent 14 years learning that the hardest problems aren’t technical—they’re organizational. Legacy code,
             circular dependencies, and tech debt are symptoms. The cure is architecture that serves humans, not just
             machines.
           </p>

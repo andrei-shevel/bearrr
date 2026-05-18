@@ -5,16 +5,16 @@ export function Contact() {
     <section id="contact" className="contact">
       <div className="contact-content">
         <div className="section-header">
-          <span className="section-tag">Let's Connect</span>
+          <span className="section-tag">Let’s Connect</span>
           <h2 className="section-title">
             Scaling a team?
             <br />
-            Let's talk architecture.
+            Let’s talk architecture.
           </h2>
         </div>
         <p className="contact-text">
-          I'm always interested in conversations about frontend architecture, team scaling, and legacy modernization.
-          Whether you're facing a technical challenge or just want to exchange ideas—reach out.
+          I’m always interested in conversations about frontend architecture, team scaling, and legacy modernization.
+          Whether you’re facing a technical challenge or just want to exchange ideas—reach out.
         </p>
         <a href="mailto:sendtoshevvy@gmail.com" className="btn btn-primary btn-large">
           <span>sendtoshevvy@gmail.com</span>
