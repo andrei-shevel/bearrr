@@ -1,0 +1,25 @@
+{
+  "projects": [
+    {
+      "slug": "messages",
+      "title": "Messages",
+      "description": "I was curious whether room-based live messaging could work with nothing fancier than HTTP and Server-Sent Events — no WebSockets, no client framework. A small Fastify server with password-protected rooms felt like the right scope to find out.",
+      "tags": ["Node.js", "Fastify", "SSE"],
+      "repoUrl": "https://github.com/andrei-shevel/messages"
+    },
+    {
+      "slug": "fifteen-game",
+      "title": "15 Puzzle",
+      "description": "Pixi.js had been on my radar for a while, so I picked the smallest game I could finish and built it end to end — less about the puzzle, more about seeing how the library feels once you're past the tutorial.",
+      "tags": ["TypeScript", "Pixi.js", "Vite"],
+      "repoUrl": "https://github.com/andrei-shevel/fifteen-game"
+    },
+    {
+      "slug": "snake",
+      "title": "Snake",
+      "description": "I wanted to know what building a game feels like when you strip everything away — no canvas library, no framework, just JavaScript and the DOM. Snake was small enough to finish, big enough to make the loop, collisions, and pacing actually matter.",
+      "tags": ["JavaScript", "HTML", "CSS"],
+      "repoUrl": "https://github.com/andrei-shevel/snake"
+    }
+  ]
+}

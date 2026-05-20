@@ -5,7 +5,7 @@
 }
 
 .projects-header {
-  margin-bottom: 3.5rem;
+  margin-bottom: 2rem;
 }
 
 .projects-header .section-tag {
@@ -13,13 +13,13 @@
 }
 
 .projects-header .section-title {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .projects-lede {
   color: var(--text-secondary);
-  font-size: 1.15rem;
-  max-width: 60ch;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 @media (max-width: 768px) {

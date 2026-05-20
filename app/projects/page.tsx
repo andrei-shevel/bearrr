@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 
+import { ProjectList } from '@/components/sections/projects/ProjectList';
+
 import './style.css';
 
 export const metadata: Metadata = {
@@ -15,9 +17,10 @@ export default function Projects() {
         <h1 className="section-title">Personal projects and experiments.</h1>
         <p className="projects-lede">
           What I build outside of work — small tools, prototypes, and explorations driven by curiosity rather than a
-          roadmap. <span className="highlight">Coming soon.</span>
+          roadmap.
         </p>
       </header>
+      <ProjectList />
     </div>
   );
 }
