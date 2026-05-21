@@ -18,7 +18,7 @@ ssh $HOST "$(cat <<ENDSSH
   systemctl reload nginx
 
   # ── Build & run (Docker Compose) ─────────────────────────────────────────
-  cd $REMOTE && SITE_URL="$SITE_URL" PORT="$PORT" docker compose up -d --build
+  cd $REMOTE && docker compose up -d --build
 
   echo "Done."
 ENDSSH

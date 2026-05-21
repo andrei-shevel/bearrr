@@ -5,6 +5,8 @@ services:
       dockerfile: Dockerfile
       args:
         SITE_URL: ${SITE_URL}
+        NEXT_PUBLIC_MIXPANEL_TOKEN: ${NEXT_PUBLIC_MIXPANEL_TOKEN:-}
+        NEXT_PUBLIC_MIXPANEL_API_HOST: ${NEXT_PUBLIC_MIXPANEL_API_HOST:-}
 
     environment:
       SITE_URL: ${SITE_URL}

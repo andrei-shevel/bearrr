@@ -21,15 +21,22 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Environment Variables
 
-Copy `.env.example` to `.env` and fill in the values:
+Copy `.env.example` to `.env` for local deploy config. Create a separate `.env` on the server at `$REMOTE` for Docker build/runtime values.
+
+**Local `.env`** (used by `deploy.sh`):
+
+| Variable   | Description                        |
+| ---------- | ---------------------------------- |
+| `HOST`     | SSH target, e.g. `root@1.2.3.4`    |
+| `REMOTE`   | Deployment path on the server      |
+| `RUN_USER` | System user that owns the checkout |
+
+**Server `$REMOTE/.env`** (used by `docker compose up --build`):
 
 | Variable                        | Description                                                                       |
 | ------------------------------- | --------------------------------------------------------------------------------- |
-| `HOST`                          | SSH target, e.g. `root@1.2.3.4`                                                   |
-| `REMOTE`                        | Deployment path on the server                                                     |
-| `SITE_URL`                      | Public URL for OG metadata, sitemap, deploy                                       |
+| `SITE_URL`                      | Public URL for OG metadata, sitemap, and build                                    |
 | `PORT`                          | Host port mapped to the app (default `3000`). Match nginx `proxy_pass` on the VPS |
-| `RUN_USER`                      | System user that owns the git checkout                                            |
 | `NEXT_PUBLIC_MIXPANEL_TOKEN`    | Mixpanel project token (analytics disabled when unset)                            |
 | `NEXT_PUBLIC_MIXPANEL_API_HOST` | Optional. Set to `https://api-eu.mixpanel.com` for EU data residency              |
 
