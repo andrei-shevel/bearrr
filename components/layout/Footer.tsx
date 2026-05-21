@@ -1,8 +1,16 @@
+'use client';
+
 import Link from 'next/link';
+
+import { useAnalyticsConsent } from '@/components/analytics/AnalyticsConsentProvider';
+import { hasAnalyticsConfigured } from '@/lib/analytics-consent';
 
 import './Footer.css';
 
 export function Footer() {
+  const { resetConsent } = useAnalyticsConsent();
+  const analyticsEnabled = hasAnalyticsConfigured();
+
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -11,6 +19,11 @@ export function Footer() {
           <Link href="/privacy" className="footer-link">
             Privacy
           </Link>
+          {analyticsEnabled && (
+            <button type="button" className="footer-link footer-preferences" onClick={resetConsent}>
+              Cookie settings
+            </button>
+          )}
         </div>
         <span className="footer-location">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

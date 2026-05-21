@@ -23,13 +23,15 @@ Open [http://localhost:3000](http://localhost:3000).
 
 Copy `.env.example` to `.env` and fill in the values:
 
-| Variable   | Description                                                                       |
-| ---------- | --------------------------------------------------------------------------------- |
-| `HOST`     | SSH target, e.g. `root@1.2.3.4`                                                   |
-| `REMOTE`   | Deployment path on the server                                                     |
-| `SITE_URL` | Public URL for OG metadata, sitemap, deploy                                       |
-| `PORT`     | Host port mapped to the app (default `3000`). Match nginx `proxy_pass` on the VPS |
-| `RUN_USER` | System user that owns the git checkout                                            |
+| Variable                        | Description                                                                       |
+| ------------------------------- | --------------------------------------------------------------------------------- |
+| `HOST`                          | SSH target, e.g. `root@1.2.3.4`                                                   |
+| `REMOTE`                        | Deployment path on the server                                                     |
+| `SITE_URL`                      | Public URL for OG metadata, sitemap, deploy                                       |
+| `PORT`                          | Host port mapped to the app (default `3000`). Match nginx `proxy_pass` on the VPS |
+| `RUN_USER`                      | System user that owns the git checkout                                            |
+| `NEXT_PUBLIC_MIXPANEL_TOKEN`    | Mixpanel project token (analytics disabled when unset)                            |
+| `NEXT_PUBLIC_MIXPANEL_API_HOST` | Optional. Set to `https://api-eu.mixpanel.com` for EU data residency              |
 
 ## Deployment
 

@@ -1,7 +1,9 @@
-import type { ReactNode } from 'react';
+import { type ReactNode, Suspense } from 'react';
 import type { Metadata } from 'next';
 import { Syne } from 'next/font/google';
 
+import { AnalyticsConsentProvider } from '@/components/analytics/AnalyticsConsentProvider';
+import { MixpanelAnalytics } from '@/components/analytics/MixpanelAnalytics';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { GradientOrbs } from '@/components/layout/GradientOrbs';
@@ -47,10 +49,15 @@ export default function RootLayout({
         <div className="noise" />
         <GradientOrbs />
 
-        <ConsoleGreeting />
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <AnalyticsConsentProvider>
+          <Suspense fallback={null}>
+            <MixpanelAnalytics />
+          </Suspense>
+          <ConsoleGreeting />
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </AnalyticsConsentProvider>
       </body>
     </html>
   );

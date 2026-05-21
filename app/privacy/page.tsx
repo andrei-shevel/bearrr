@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 
 import './style.css';
 
-const lastUpdated = 'May 17, 2026';
+const lastUpdated = 'May 21, 2026';
 
 export const metadata: Metadata = {
   title: 'Privacy',
   description:
-    'How bearrr.io handles your data. Short version: almost nothing — no cookies, no analytics, no third-party trackers.',
+    'How bearrr.io handles your data. Analytics via Mixpanel; no ad trackers or cookies beyond what Mixpanel uses for session identification.',
 };
 
 export default function Privacy() {
@@ -21,18 +21,27 @@ export default function Privacy() {
           with your data.
         </h1>
         <p className="privacy-lede">
-          Short version: <span className="highlight">almost nothing</span>. No cookies, no analytics, no third-party
-          trackers. The long version is below.
+          Short version: analytics run only if you accept the prompt. Mixpanel records page views; nothing loads until
+          you opt in. Details below.
         </p>
       </header>
 
       <section className="privacy-section">
         <h2 className="privacy-section-title">In your browser</h2>
         <p>
-          Loading this site does <strong>not</strong> set any cookies and does not write to <code>localStorage</code> or{' '}
-          <code>sessionStorage</code>. No analytics scripts run — no Google Analytics, Plausible, Umami, PostHog,
-          Sentry, or anything similar. Fonts are downloaded at build time and served from this domain, so your browser
-          doesn’t talk to Google Fonts at runtime either.
+          On your first visit, a banner asks whether to enable analytics. If you accept, Mixpanel loads and records page
+          views (which pages you visit and when). If you decline, no analytics scripts run. Your choice is saved in{' '}
+          <code>localStorage</code> under <code>analytics-consent</code>. You can change it anytime via{' '}
+          <strong>Cookie settings</strong> in the footer.
+        </p>
+        <p>
+          When analytics are enabled, Mixpanel stores a random device identifier in <code>localStorage</code> so repeat
+          visits can be grouped without knowing who you are. Mixpanel does not set traditional tracking cookies on this
+          site.
+        </p>
+        <p>
+          Fonts are downloaded at build time and served from this domain, so your browser doesn’t talk to Google Fonts
+          at runtime either.
         </p>
       </section>
 
@@ -48,9 +57,10 @@ export default function Privacy() {
       <section className="privacy-section">
         <h2 className="privacy-section-title">Third parties</h2>
         <p>
-          No third-party scripts are embedded on this site. The Contact section links out to GitHub and LinkedIn — if
-          you follow those links, you’re subject to the privacy policies of those services. The same applies when you
-          click the email link and reply from a third-party mail provider.
+          Page-view events are sent to <a href="https://mixpanel.com">Mixpanel</a> (US-hosted by default; EU residency
+          can be configured). Mixpanel’s privacy policy applies to that data. The Contact section links out to GitHub
+          and LinkedIn — if you follow those links, you’re subject to the privacy policies of those services. The same
+          applies when you click the email link and reply from a third-party mail provider.
         </p>
       </section>
 
@@ -67,8 +77,8 @@ export default function Privacy() {
         <h2 className="privacy-section-title">Your rights (GDPR)</h2>
         <p>
           Under the GDPR you have the right to ask what data I hold about you, request a copy, ask for it to be
-          corrected or deleted, and object to processing. Since nothing is collected from your visit itself, in practice
-          this only applies to messages you’ve sent me. To exercise any of these rights, email{' '}
+          corrected or deleted, and object to processing. Page views are processed by Mixpanel on my behalf; email you
+          send me is stored in Gmail. To exercise any of these rights, email{' '}
           <a href="mailto:sendtoshevvy@gmail.com">sendtoshevvy@gmail.com</a>.
         </p>
       </section>
