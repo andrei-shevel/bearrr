@@ -1,6 +1,13 @@
 {
   "projects": [
     {
+      "slug": "stars",
+      "title": "Stars",
+      "description": "Inspired by the pmndrs Gatsby stars demo. Click the link to warp this page into a starfield — a tiny experiment with React Three Fiber rendered as a backdrop instead of a hero element.",
+      "tags": ["Three.js", "R3F", "drei"],
+      "interactive": "stars"
+    },
+    {
       "slug": "messages",
       "title": "Messages",
       "description": "I was curious whether room-based live messaging could work with nothing fancier than HTTP and Server-Sent Events — no WebSockets, no client framework. A small Fastify server with password-protected rooms felt like the right scope to find out.",

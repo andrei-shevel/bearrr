@@ -17,6 +17,15 @@
   text-decoration: none;
 }
 
+.project-item-button {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
 .project-item-link:hover .project-title {
   color: var(--accent-primary);
 }
