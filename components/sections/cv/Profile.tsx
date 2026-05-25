@@ -7,9 +7,11 @@ export function Profile() {
     <section className="cv-section">
       <h2 className="cv-section-title">Profile</h2>
       <p className="cv-profile">
-        {getYearsOfExperience()}+ years building and scaling web applications. I lead frontend architecture decisions,
-        mentor engineering teams, and bridge technical execution with business outcomes. My focus is on sustainable
-        practices—migrations, modularization, component systems—that compound team velocity over time.
+        Full-stack engineer with {getYearsOfExperience()}+ years owning web products end to end—React/TypeScript UIs and
+        accessible component systems, Node.js and Ruby on Rails services, AWS delivery, and org-wide architecture.
+        Comfortable across the stack and across the lifecycle: requirements, design, implementation, deployment, and
+        operation. I drive modernization, partner closely with product and design, and ship sustainable
+        practices—migrations, monorepos, observability—that compound team velocity.
       </p>
     </section>
   );

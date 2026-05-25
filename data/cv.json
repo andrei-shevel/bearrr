@@ -20,13 +20,11 @@
       "startDate": "2024-06-01",
       "endDate": "2026-06-30",
       "description": [
-        "Technical lead for modularization initiative—defined architecture vision, drove org-wide adoption of monorepo structure",
-        "Established frontend platform standards: eslint config, TypeScript patterns, and package isolation strategies",
-        "Led codebase modernization at scale",
-        "Reduced technical debt, unblocked teams, and improved build reliability",
-        "Designed and implemented performance observability system enabling proactive regression detection across teams",
-        "Drove react-router migration strategy—created proxy component patterns adopted org-wide",
-        "Active member of Frontend Strategy Group, influencing technical direction and architectural decisions"
+        "Tech lead for the monorepo foundation—migrated design system (v1 + v2) and shared hooks/utilities into the new structure, and established the package-isolation paved path (shared ESLint config, TypeScript patterns) ready for product-team adoption.",
+        "Led the internationalization initiative end to end—built the translation tooling and CI/CD pipelines, and shipped Portuguese as the MVP locale.",
+        "Built a performance notification tool that alerts on regression spikes across the org.",
+        "Drove the react-router v3 → v6 migration—introduced proxy components to bridge legacy patterns with v6, then rewrote consumers to use the new hook-based APIs.",
+        "Built a meetings notes feature on TipTap (Notion-style rich-text editing) replacing a plain-text predecessor—including the DB migration of ~few million existing notes into the new format.,"
       ],
       "impact": {
         "tags": ["Architecture", "Strategy", "Scale"],
@@ -38,23 +36,23 @@
     {
       "company": "INDY",
       "location": "Warsaw, Poland",
-      "position": "Director of Engineering",
+      "position": "Frontend Lead",
       "startDate": "2016-02-01",
       "endDate": "2024-06-01",
       "description": [
-        "Progressed Senior Developer → Frontend Lead → Director, building and scaling the engineering organization",
-        "Architected and executed TypeScript migration across the entire frontend codebase, improving DX and reducing runtime errors",
-        "Built frontend component library adopted across all product teams, accelerating feature development",
-        "Designed AWS infrastructure for frontend deployments—CI/CD pipelines, CDN configuration, and monitoring",
-        "Led cross-functional initiative to resolve critical domain blocking issue, restoring service availability",
-        "Transitioned to backend team to unblock delivery and developed comprehensive migration plan for legacy codebase",
-        "Owned technical roadmap, architecture reviews, and engineering hiring process"
+        "Owned the full frontend at INDY—responsive SPA web app, landing pages, and admin tool—across an engineering org of ~20.",
+        "Shipped an in-app chat with direct/group messaging and email integration (replies thread back into chat)—React UI, real-time delivery, Node.js services.",
+        "Built end-to-end invoicing and payments—custom templating engine, single/bulk PDF rendering pipelines, and payment integrations across Stripe, Plaid, and PayPal.",
+        "Built a files-drive feature with sharing, permissions, and in-browser previews across images (JPEG/PNG/SVG), PDF, video (MOV/MP4/WebM), and audio.",
+        "Built an in-house calendar with event management and bidirectional Google Calendar sync.",
+        "Built the landing pages on Next.js (SEO-optimized, Lighthouse >90) with a Strapi admin enabling self-service content updates by SEO specialists across landings and blog.",
+        "Designed the AWS frontend infrastructure (CI/CD, CDN, monitoring); owned roadmap, architecture reviews, hiring, and cross-functional delivery with product and design.,"
       ],
       "impact": {
         "tags": ["Leadership", "Growth"],
         "image": "/impact/indy.svg",
         "title": "Engineering Org from Zero to Scale",
-        "description": "Grew from Senior Developer to Director of Engineering over 8 years. Built the engineering organization, owned technical roadmap, led architecture reviews, and established the hiring process."
+        "description": "Grew from Senior Developer to Frontend Lead over 8 years. Built the engineering organization, owned technical roadmap, led architecture reviews, and established the hiring process."
       }
     },
     {
