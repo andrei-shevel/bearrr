@@ -1,6 +1,13 @@
 {
   "projects": [
     {
+      "slug": "notable",
+      "title": "Notable",
+      "description": "Notes turned out to be a great playground for poking at different tech — rich-text editing, full-text search, auth, and sync all in one. Tiptap, Postgres tsvector, 6-digit email codes for sign-in. Just an MVP for now; less about the product, more about how each piece feels in practice... WebSockets and real-time collab are next.",
+      "tags": ["React", "Fastify", "Postgres"],
+      "repoUrl": "https://github.com/andrei-shevel/notable"
+    },
+    {
       "slug": "stars",
       "title": "Stars",
       "description": "Inspired by the pmndrs Gatsby stars demo. Click the link to warp this page into a starfield — a tiny experiment with React Three Fiber rendered as a backdrop instead of a hero element.",
