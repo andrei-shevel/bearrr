@@ -1,6 +1,13 @@
 {
   "projects": [
     {
+      "slug": "factorial",
+      "title": "Factorial WASM",
+      "description": "Built a little Rust → WASM factorial demo with a Vue 3 frontend. Arbitrary-precision math via malachite, running inside a Web Worker so the UI never blocks. Toolchain (wasm-bindgen + wasm-pack + vite-plugin-wasm) is genuinely smooth.",
+      "tags": ["WASM", "Rust", "Vue"],
+      "repoUrl": "https://github.com/andrei-shevel/factorial-wasm"
+    },
+    {
       "slug": "notable",
       "title": "Notable",
       "description": "Notes turned out to be a great playground for poking at different tech — rich-text editing, full-text search, auth, and sync all in one. Tiptap, Postgres tsvector, 6-digit email codes for sign-in. Just an MVP for now; less about the product, more about how each piece feels in practice... WebSockets and real-time collab are next.",
