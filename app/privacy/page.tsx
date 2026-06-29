@@ -2,12 +2,11 @@ import type { Metadata } from 'next';
 
 import './style.css';
 
-const lastUpdated = 'May 21, 2026';
+const lastUpdated = 'June 29, 2026';
 
 export const metadata: Metadata = {
   title: 'Privacy',
-  description:
-    'How bearrr.io handles your data. Analytics via Mixpanel; no ad trackers or cookies beyond what Mixpanel uses for session identification.',
+  description: 'How bearrr.io handles your data. No analytics, no ad trackers, no cookies.',
 };
 
 export default function Privacy() {
@@ -21,23 +20,16 @@ export default function Privacy() {
           with your data.
         </h1>
         <p className="privacy-lede">
-          Short version: analytics run only if you accept the prompt. Mixpanel records page views; nothing loads until
-          you opt in. Details below.
+          Short version: no analytics, no tracking, no cookies. This site doesn’t collect anything about your visit.
+          Details below.
         </p>
       </header>
 
       <section className="privacy-section">
         <h2 className="privacy-section-title">In your browser</h2>
         <p>
-          On your first visit, a banner asks whether to enable analytics. If you accept, Mixpanel loads and records page
-          views (which pages you visit and when). If you decline, no analytics scripts run. Your choice is saved in{' '}
-          <code>localStorage</code> under <code>analytics-consent</code>. You can change it anytime via{' '}
-          <strong>Cookie settings</strong> in the footer.
-        </p>
-        <p>
-          When analytics are enabled, Mixpanel stores a random device identifier in <code>localStorage</code> so repeat
-          visits can be grouped without knowing who you are. Mixpanel does not set traditional tracking cookies on this
-          site.
+          This site runs no analytics and no tracking scripts. It sets no cookies and stores nothing about you in your
+          browser.
         </p>
         <p>
           Fonts are downloaded at build time and served from this domain, so your browser doesn’t talk to Google Fonts
@@ -57,10 +49,9 @@ export default function Privacy() {
       <section className="privacy-section">
         <h2 className="privacy-section-title">Third parties</h2>
         <p>
-          Page-view events are sent to <a href="https://mixpanel.com">Mixpanel</a> (US-hosted by default; EU residency
-          can be configured). Mixpanel’s privacy policy applies to that data. The Contact section links out to GitHub
-          and LinkedIn — if you follow those links, you’re subject to the privacy policies of those services. The same
-          applies when you click the email link and reply from a third-party mail provider.
+          No visit data is sent to any third party. The Contact section links out to GitHub and LinkedIn — if you follow
+          those links, you’re subject to the privacy policies of those services. The same applies when you click the
+          email link and reply from a third-party mail provider.
         </p>
       </section>
 
@@ -77,8 +68,8 @@ export default function Privacy() {
         <h2 className="privacy-section-title">Your rights (GDPR)</h2>
         <p>
           Under the GDPR you have the right to ask what data I hold about you, request a copy, ask for it to be
-          corrected or deleted, and object to processing. Page views are processed by Mixpanel on my behalf; email you
-          send me is stored in Gmail. To exercise any of these rights, email{' '}
+          corrected or deleted, and object to processing. The only data I hold is any email you send me, which is stored
+          in Gmail. To exercise any of these rights, email{' '}
           <a href="mailto:sendtoshevvy@gmail.com">sendtoshevvy@gmail.com</a>.
         </p>
       </section>

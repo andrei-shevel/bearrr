@@ -33,12 +33,10 @@ Copy `.env.example` to `.env` for local deploy config. Create a separate `.env` 
 
 **Server `$REMOTE/.env`** (used by `docker compose up --build`):
 
-| Variable                        | Description                                                                       |
-| ------------------------------- | --------------------------------------------------------------------------------- |
-| `SITE_URL`                      | Public URL for OG metadata, sitemap, and build                                    |
-| `PORT`                          | Host port mapped to the app (default `3000`). Match nginx `proxy_pass` on the VPS |
-| `NEXT_PUBLIC_MIXPANEL_TOKEN`    | Mixpanel project token (analytics disabled when unset)                            |
-| `NEXT_PUBLIC_MIXPANEL_API_HOST` | Optional. Set to `https://api-eu.mixpanel.com` for EU data residency              |
+| Variable   | Description                                                                       |
+| ---------- | --------------------------------------------------------------------------------- |
+| `SITE_URL` | Public URL for OG metadata, sitemap, and build                                    |
+| `PORT`     | Host port mapped to the app (default `3000`). Match nginx `proxy_pass` on the VPS |
 
 ## Deployment
 
