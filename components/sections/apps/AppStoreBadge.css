@@ -1,0 +1,58 @@
+.appstore-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.7rem 1.25rem;
+  border-radius: 12px;
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  text-decoration: none;
+  transition:
+    transform 0.3s var(--ease-out-quad),
+    box-shadow 0.3s var(--ease-out-quad);
+}
+
+.appstore-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.appstore-badge-large {
+  padding: 0.85rem 1.5rem;
+}
+
+.appstore-badge-soon {
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  cursor: default;
+}
+
+.appstore-badge-soon:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.appstore-badge-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.appstore-badge-line1 {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+}
+
+.appstore-badge-line2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.appstore-badge-large .appstore-badge-line2 {
+  font-size: 1.25rem;
+}

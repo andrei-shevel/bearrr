@@ -1,0 +1,89 @@
+.apps-list {
+  list-style: none;
+}
+
+.app-item {
+  border-top: 1px solid var(--border-color);
+}
+
+.app-item:last-child {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.app-item-link {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.app-item-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  flex-shrink: 0;
+  border: 1px solid var(--border-subtle);
+}
+
+.app-item-body {
+  min-width: 0;
+  flex: 1;
+}
+
+.app-item-header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.app-item-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+.app-item-link:hover .app-item-title {
+  color: var(--accent-primary);
+}
+
+.app-item-meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.app-item-desc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.app-item-arrow {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.app-item-link:hover .app-item-arrow {
+  color: var(--accent-primary);
+  transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+  .app-item-link {
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  .app-item-icon {
+    width: 52px;
+    height: 52px;
+  }
+}

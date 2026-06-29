@@ -45,6 +45,7 @@ export function Header() {
       {/* Desktop Navigation */}
       <div className="nav-links">
         <Link href="/cv">CV</Link>
+        <Link href="/apps">Apps</Link>
         <Link href="/projects">Projects</Link>
         <Link href="/contact" className="nav-cta">
           Let’s Talk
@@ -68,6 +69,9 @@ export function Header() {
         <div className="mobile-menu-links">
           <Link href="/cv" onClick={handleLinkClick}>
             CV
+          </Link>
+          <Link href="/apps" onClick={handleLinkClick}>
+            Apps
           </Link>
           <Link href="/projects" onClick={handleLinkClick}>
             Projects
