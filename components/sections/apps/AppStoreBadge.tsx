@@ -3,6 +3,7 @@ import './AppStoreBadge.css';
 type AppStoreBadgeProps = {
   url?: string;
   large?: boolean;
+  variant?: 'appstore' | 'direct';
 };
 
 const AppleLogo = () => (
@@ -11,16 +12,22 @@ const AppleLogo = () => (
   </svg>
 );
 
-export function AppStoreBadge({ url, large = false }: AppStoreBadgeProps) {
+const badgeText = {
+  appstore: { soon: ['Coming soon to the', 'App Store'], ready: ['Download on the', 'App Store'] },
+  direct: { soon: ['Coming soon for', 'Mac'], ready: ['Download for', 'Mac'] },
+} as const;
+
+export function AppStoreBadge({ url, large = false, variant = 'appstore' }: AppStoreBadgeProps) {
   const className = `appstore-badge${large ? ' appstore-badge-large' : ''}`;
+  const [line1, line2] = badgeText[variant][url ? 'ready' : 'soon'];
 
   if (!url) {
     return (
       <span className={`${className} appstore-badge-soon`} aria-disabled="true">
         <AppleLogo />
         <span className="appstore-badge-text">
-          <span className="appstore-badge-line1">Coming soon to the</span>
-          <span className="appstore-badge-line2">App Store</span>
+          <span className="appstore-badge-line1">{line1}</span>
+          <span className="appstore-badge-line2">{line2}</span>
         </span>
       </span>
     );
@@ -30,8 +37,8 @@ export function AppStoreBadge({ url, large = false }: AppStoreBadgeProps) {
     <a className={className} href={url} target="_blank" rel="noopener noreferrer">
       <AppleLogo />
       <span className="appstore-badge-text">
-        <span className="appstore-badge-line1">Download on the</span>
-        <span className="appstore-badge-line2">App Store</span>
+        <span className="appstore-badge-line1">{line1}</span>
+        <span className="appstore-badge-line2">{line2}</span>
       </span>
     </a>
   );

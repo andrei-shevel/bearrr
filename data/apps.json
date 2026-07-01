@@ -9,7 +9,8 @@
       "price": "Free",
       "icon": "/apps/todo-tide/icon.png",
       "accent": "#7ec8b1",
-      "appStoreUrl": "",
+      "distribution": "appstore",
+      "downloadUrl": "",
       "appStoreId": "",
       "bundleId": "",
       "supportEmail": "sendtoshevvy@gmail.com",
@@ -83,6 +84,89 @@
           {
             "title": "Contact",
             "body": ["Questions about privacy in Todo Tide? Email sendtoshevvy@gmail.com."]
+          }
+        ]
+      }
+    },
+    {
+      "slug": "perch",
+      "name": "Perch",
+      "tagline": "One shortcut. Your window, centered and alone.",
+      "summary": "A tiny macOS menu-bar utility that resizes, centers, and focuses your frontmost window with a single global shortcut — everything else politely steps out of the way.",
+      "platform": "macOS",
+      "price": "Free",
+      "icon": "/apps/perch/icon.png",
+      "accent": "#3f8fd1",
+      "distribution": "direct",
+      "downloadUrl": "/apps/perch/Perch.dmg",
+      "appStoreId": "",
+      "bundleId": "com.shevvy.perch",
+      "supportEmail": "sendtoshevvy@gmail.com",
+      "intro": [
+        "Perch is a tiny macOS menu-bar app with one job: press a global shortcut and the window you're working in snaps to a clean, centered size while everything else tucks out of view.",
+        "It runs quietly in the menu bar with no Dock icon, no accounts, and nothing to configure beyond the shortcut and size you like."
+      ],
+      "features": [
+        {
+          "title": "One global shortcut",
+          "description": "Press ⌃⌥↵ (Control + Option + Return) from anywhere and the frontmost window resizes to 80% width and 90% height of the screen and centers itself. The shortcut is fully customizable in Settings."
+        },
+        {
+          "title": "Everything else hides behind",
+          "description": "Other windows on the same screen are moved behind the focused window instead of being closed or minimized — they're still there, just out of the way until you need them."
+        },
+        {
+          "title": "Adjustable sizing",
+          "description": "Sliders in Settings let you tune exactly how wide and tall the focused window should be, so Perch fits how you like to work."
+        },
+        {
+          "title": "Lives in the menu bar",
+          "description": "No Dock icon, no clutter — just a small menu-bar item with a Focus Now action, a Launch at Login toggle, and quick access to the Accessibility permission it needs."
+        }
+      ],
+      "highlights": [],
+      "screenshots": [],
+      "privacyPolicy": {
+        "effectiveDate": "July 1, 2026",
+        "collectsData": false,
+        "summary": "Perch does not collect, transmit, or share any personal data. It has no accounts, no servers, and no analytics.",
+        "sections": [
+          {
+            "title": "What we collect",
+            "body": [
+              "Nothing. Perch has no accounts, no sign-up, and no servers. Your shortcut and window-size preferences are stored locally on your Mac using standard macOS UserDefaults, and we never see them.",
+              "There is no analytics, no advertising SDK, no crash-reporting service, and no third-party tracking of any kind in the app."
+            ]
+          },
+          {
+            "title": "Accessibility permission",
+            "body": [
+              "Perch asks for Accessibility access because it needs it to read and move the position and size of windows belonging to other apps — that's how the focus shortcut works. This permission is used only to arrange windows on your screen and is never used to read window contents or send anything off your device."
+            ]
+          },
+          {
+            "title": "What we share",
+            "body": ["Because no data ever leaves your device to us, there is nothing for us to share or sell."]
+          },
+          {
+            "title": "Your data, your control",
+            "body": [
+              "You can revoke Accessibility access at any time in System Settings → Privacy & Security → Accessibility, or remove the app entirely, which removes its local preferences from your device."
+            ]
+          },
+          {
+            "title": "Children's privacy",
+            "body": ["Perch does not knowingly collect any information from anyone, including children under 13."]
+          },
+          {
+            "title": "Changes to this policy",
+            "body": [
+              "If this policy ever changes, the updated version will be posted on this page with a new effective date."
+            ]
+          },
+          {
+            "title": "Contact",
+            "body": ["Questions about privacy in Perch? Email sendtoshevvy@gmail.com."]
           }
         ]
       }

@@ -69,7 +69,7 @@ export default async function AppPage({ params }: AppPageProps) {
         <p className="app-hero-summary">{app.summary}</p>
 
         <div className="app-hero-cta">
-          <AppStoreBadge url={app.appStoreUrl || undefined} large />
+          <AppStoreBadge url={app.downloadUrl || undefined} variant={app.distribution} large />
         </div>
       </section>
 
@@ -110,7 +110,7 @@ export default async function AppPage({ params }: AppPageProps) {
       </section>
 
       <section className="app-footer-cta">
-        <AppStoreBadge url={app.appStoreUrl || undefined} large />
+        <AppStoreBadge url={app.downloadUrl || undefined} variant={app.distribution} large />
         <div className="app-footer-links">
           <a href={`mailto:${app.supportEmail}`}>Support</a>
           <Link href={`/apps/${app.slug}/privacy`}>Privacy</Link>

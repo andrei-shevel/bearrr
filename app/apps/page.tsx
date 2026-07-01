@@ -6,7 +6,7 @@ import './style.css';
 
 export const metadata: Metadata = {
   title: 'Apps',
-  description: 'Apps by Andrei Shevel — small, focused tools for iOS.',
+  description: 'Apps by Andrei Shevel — small, focused tools.',
 };
 
 export default function Apps() {

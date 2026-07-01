@@ -31,7 +31,8 @@ export type App = {
   price: string;
   icon: string;
   accent: string;
-  appStoreUrl: string;
+  distribution: 'appstore' | 'direct';
+  downloadUrl: string;
   appStoreId: string;
   bundleId: string;
   supportEmail: string;
