@@ -2,6 +2,8 @@ import Image from 'next/image';
 
 import cv from '@/data/cv.json' with { type: 'json' };
 
+import { getYearsOfExperience } from '@/lib/utils';
+
 import './About.css';
 
 export function About() {
@@ -24,9 +26,9 @@ export function About() {
             that compound team velocity over time.
           </p>
           <p>
-            I’ve spent 14 years learning that the hardest problems aren’t technical—they’re organizational. Legacy code,
-            circular dependencies, and tech debt are symptoms. The cure is architecture that serves humans, not just
-            machines.
+            I’ve spent {getYearsOfExperience()} years learning that the hardest problems aren’t technical—they’re
+            organizational. Legacy code, circular dependencies, and tech debt are symptoms. The cure is architecture
+            that serves humans, not just machines.
           </p>
         </div>
         <div className="skills-grid">

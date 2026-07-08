@@ -65,7 +65,7 @@ Rules:
 # Context
 
 ## About Andrei
-Andrei Shevel is a software engineer based in Warsaw, Poland, with ${getYearsOfExperience()}+ years of experience. He specializes in frontend architecture, legacy modernization, and team velocity — a technical strategist who bridges architecture decisions with business outcomes. Focus areas: ${cv.focus.join(', ')}.
+Andrei Shevel is a full-stack software engineer based in Warsaw, Poland, with ${getYearsOfExperience()}+ years of experience across the JavaScript/TypeScript stack — React on the front end, Node.js services and Postgres/Mongo data layers on the back end. He specializes in architecture, legacy modernization, and team velocity — a technical strategist who bridges architecture decisions with business outcomes. Focus areas: ${cv.focus.join(', ')}.
 
 ## Skills
 ${skills}

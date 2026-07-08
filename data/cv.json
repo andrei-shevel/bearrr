@@ -1,16 +1,28 @@
 {
   "skills": {
     "Core": ["TypeScript", "JavaScript", "HTML", "CSS", "SASS"],
-    "Frontend": ["React", "Monorepo", "Webpack / Vite", "Component Systems"],
-    "Backend": ["Node.js", "Ruby on Rails", "MongoDB"],
-    "Platform": ["AWS", "Docker", "CI/CD"],
-    "Practices": ["TDD", "Jest", "Architecture"]
+    "Frontend": ["React", "Component Systems", "Accessibility", "Monorepos", "Webpack / Vite"],
+    "Backend": [
+      "Node.js",
+      "Fastify / Express",
+      "REST APIs",
+      "OpenAPI",
+      "PostgreSQL",
+      "MongoDB",
+      "Drizzle / ORMs",
+      "Redis",
+      "Ruby on Rails"
+    ],
+    "Platform": ["AWS", "Docker", "CI/CD", "Performance Observability"],
+    "Practices": ["Architecture", "Legacy Modernization", "TDD / Jest", "ESLint", "Code Review"]
   },
   "focus": [
     "Architecture & Tech Strategy",
-    "Legacy Modernization",
-    "Cross-team Collaboration",
-    "Team Building & Mentorship"
+    "End-to-end Ownership Across the Stack",
+    "Legacy Modernization & Migrations",
+    "Cross-functional Partnership",
+    "Team Building & Mentorship",
+    "Technical Hiring & Interviews"
   ],
   "experience": [
     {
@@ -21,10 +33,12 @@
       "endDate": "2026-06-30",
       "description": [
         "Tech lead for the monorepo foundation—migrated design system (v1 + v2) and shared hooks/utilities into the new structure, and established the package-isolation paved path (shared ESLint config, TypeScript patterns) ready for product-team adoption.",
-        "Led the internationalization initiative end to end—built the translation tooling and CI/CD pipelines, and shipped Portuguese as the MVP locale.",
-        "Built a performance notification tool that alerts on regression spikes across the org.",
+        "Led the internationalization initiative end to end—built the translation tooling and CI/CD pipelines, and shipped Spanish as the MVP locale.",
+        "Built an org-wide frontend performance regression alerting tool.",
         "Drove the react-router v3 → v6 migration—introduced proxy components to bridge legacy patterns with v6, then rewrote consumers to use the new hook-based APIs.",
-        "Built a meetings notes feature on TipTap (Notion-style rich-text editing) replacing a plain-text predecessor—including the DB migration of ~few million existing notes into the new format.,"
+        "Built a meetings notes feature on TipTap (Notion-style rich-text editing) replacing a plain-text predecessor—including the DB migration of a few million existing notes into the new format.",
+        "Active member of the Frontend Strategy Group, influencing technical direction and architectural decisions across the product org.",
+        "Day-to-day engineering workflow uses Cursor and Claude for AI-assisted development across review, refactoring, and feature delivery."
       ],
       "impact": {
         "tags": ["Architecture", "Strategy", "Scale"],
@@ -36,7 +50,7 @@
     {
       "company": "INDY",
       "location": "Warsaw, Poland",
-      "position": "Frontend Lead",
+      "position": "Lead Software Engineer",
       "startDate": "2016-02-01",
       "endDate": "2024-06-01",
       "description": [
@@ -46,13 +60,13 @@
         "Built a files-drive feature with sharing, permissions, and in-browser previews across images (JPEG/PNG/SVG), PDF, video (MOV/MP4/WebM), and audio.",
         "Built an in-house calendar with event management and bidirectional Google Calendar sync.",
         "Built the landing pages on Next.js (SEO-optimized, Lighthouse >90) with a Strapi admin enabling self-service content updates by SEO specialists across landings and blog.",
-        "Designed the AWS frontend infrastructure (CI/CD, CDN, monitoring); owned roadmap, architecture reviews, hiring, and cross-functional delivery with product and design.,"
+        "Designed the AWS frontend infrastructure (CI/CD, CDN, monitoring); owned roadmap, architecture reviews, hiring, and cross-functional delivery with product and design."
       ],
       "impact": {
         "tags": ["Leadership", "Growth"],
         "image": "/impact/indy.svg",
         "title": "Engineering Org from Zero to Scale",
-        "description": "Grew from Senior Developer to Frontend Lead over 8 years. Built the engineering organization, owned technical roadmap, led architecture reviews, and established the hiring process."
+        "description": "Grew from Senior Developer to Lead Software Engineer over 8 years. Built the engineering organization, owned technical roadmap, led architecture reviews, and established the hiring process."
       }
     },
     {
@@ -62,20 +76,21 @@
       "startDate": "2012-03-01",
       "endDate": "2016-08-01",
       "description": [
-        "Grew from junior developer to team lead over 4 years, shipping frontend, backend, and mobile solutions",
-        "Established team education program—structured code reviews, knowledge sharing sessions, and onboarding processes",
-        "Served as primary technical point of contact for enterprise clients, managing requirements and delivery",
-        "Developed expertise across full stack: frontend interfaces, backend APIs, and mobile applications"
+        "Progressed from engineer to team lead; shipped end-to-end full-stack web platforms for enterprise clients across telecom, sports, scheduling, and education domains.",
+        "Built telecom web platforms on Node.js/AngularJS—internal tooling, customer-facing UI, REST APIs and backend services, a Backbone.js customer panel, and supporting Symfony 2 modules.",
+        "Shipped a sports-focused social network (PHP/AngularJS) and a PHP booking platform with calendar flows, user management, and notifications; contributed to an educational platform across frontend, backend, and content management.",
+        "Established a team education program—structured code reviews, knowledge sharing sessions, and onboarding processes.",
+        "Served as primary technical point of contact for clients across requirements, estimation, and delivery ownership."
       ]
     },
     {
-      "company": "Different clients",
+      "company": "Various clients",
       "position": "Full Stack Developer",
       "startDate": "2009-06-01",
       "endDate": "2012-03-01",
       "description": [
-        "Delivered end-to-end web solutions—from requirements gathering to deployment and maintenance",
-        "Handled design adaptation for web, translating visual designs into responsive implementations",
+        "Delivered end-to-end web solutions—from requirements gathering to deployment and maintenance.",
+        "Translated visual designs into responsive, accessible implementations.",
         "Managed direct client relationships"
       ]
     }
