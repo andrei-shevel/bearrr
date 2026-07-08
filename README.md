@@ -33,10 +33,14 @@ Copy `.env.example` to `.env` for local deploy config. Create a separate `.env` 
 
 **Server `$REMOTE/.env`** (used by `docker compose up --build`):
 
-| Variable   | Description                                                                       |
-| ---------- | --------------------------------------------------------------------------------- |
-| `SITE_URL` | Public URL for OG metadata, sitemap, and build                                    |
-| `PORT`     | Host port mapped to the app (default `3000`). Match nginx `proxy_pass` on the VPS |
+| Variable            | Description                                                                        |
+| ------------------- | ---------------------------------------------------------------------------------- |
+| `SITE_URL`          | Public URL for OG metadata, sitemap, and build                                     |
+| `PORT`              | Host port mapped to the app (default `3000`). Match nginx `proxy_pass` on the VPS  |
+| `ANTHROPIC_API_KEY` | Claude API key for the chat widget (`/api/chat`). Takes priority when both are set |
+| `GROQ_API_KEY`      | Groq API key (free tier) — chat fallback provider when no Anthropic key is set     |
+
+The chat widget needs at least one of the two keys; with neither, `/api/chat` returns 503 and the rest of the site works normally. For local development, put the key in `.env.local` (git-ignored) so `pnpm dev` picks it up.
 
 ## Deployment
 

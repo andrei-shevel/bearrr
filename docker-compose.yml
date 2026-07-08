@@ -8,6 +8,8 @@ services:
 
     environment:
       SITE_URL: ${SITE_URL}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
 
     ports:
       - '127.0.0.1:${PORT:-3000}:3000'

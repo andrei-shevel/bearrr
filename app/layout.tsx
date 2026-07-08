@@ -6,6 +6,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { GradientOrbs } from '@/components/layout/GradientOrbs';
 import { ConsoleGreeting } from '@/components/ConsoleGreeting';
+import { ChatWidget } from '@/components/chat/ChatWidget';
 
 import './globals.css';
 
@@ -51,6 +52,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <ChatWidget />
       </body>
     </html>
   );

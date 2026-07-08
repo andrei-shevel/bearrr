@@ -87,7 +87,7 @@ systemctl status certbot.timer
 
 ## 10. First Deploy
 
-On your local machine, set `HOST`, `REMOTE`, and `RUN_USER` in `.env` (see `.env.example`). On the server, create `$REMOTE/.env` with `SITE_URL`, `PORT`, and any `NEXT_PUBLIC_*` vars, then:
+On your local machine, set `HOST`, `REMOTE`, and `RUN_USER` in `.env` (see `.env.example`). On the server, create `$REMOTE/.env` with `SITE_URL`, `PORT`, `ANTHROPIC_API_KEY` or `GROQ_API_KEY` (for the chat widget), and any `NEXT_PUBLIC_*` vars, then:
 
 ```bash
 ./deploy.sh
