@@ -1,7 +1,15 @@
 {
   "skills": {
-    "Core": ["TypeScript", "JavaScript", "HTML", "CSS", "SASS"],
-    "Frontend": ["React", "Component Systems", "Accessibility", "Monorepos", "Webpack / Vite"],
+    "Frontend": [
+      "TypeScript",
+      "JavaScript",
+      "React",
+      "Component Systems",
+      "Accessibility",
+      "HTML / CSS / SASS",
+      "Monorepos",
+      "Webpack / Vite"
+    ],
     "Backend": [
       "Node.js",
       "Fastify / Express",
