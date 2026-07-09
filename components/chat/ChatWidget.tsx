@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
+import { type ReactNode, useEffect, useRef, useState } from 'react';
 
 import './ChatWidget.css';
 
@@ -14,6 +15,46 @@ const GREETING = "Hi! I'm Andrei's site assistant. Ask me about his experience, 
 const SUGGESTIONS = ['What did Andrei do at Apollo.io?', 'What apps has he built?', 'What are his main skills?'];
 
 const MAX_INPUT_LENGTH = 1000;
+
+// URLs, email addresses, and internal routes (e.g. /contact) in assistant replies.
+const LINK_PATTERN =
+  /(https?:\/\/[^\s<>()"']*[^\s<>()"'.,!?;:]|[\w.+-]+@[\w-]+(?:\.[\w-]+)+|(?<![\w/])\/(?:apps|contact|cv|privacy|projects)\b(?![\w/-]))/g;
+
+function MessageContent({ content }: { content: string }) {
+  const nodes: ReactNode[] = [];
+  let lastIndex = 0;
+
+  for (const match of content.matchAll(LINK_PATTERN)) {
+    const text = match[0];
+    if (match.index > lastIndex) nodes.push(content.slice(lastIndex, match.index));
+
+    if (text.startsWith('http')) {
+      nodes.push(
+        <a key={match.index} className="chat-link" href={text} target="_blank" rel="noopener noreferrer">
+          {text}
+        </a>
+      );
+    } else if (text.startsWith('/')) {
+      nodes.push(
+        <Link key={match.index} className="chat-link" href={text}>
+          {text}
+        </Link>
+      );
+    } else {
+      nodes.push(
+        <a key={match.index} className="chat-link" href={`mailto:${text}`}>
+          {text}
+        </a>
+      );
+    }
+
+    lastIndex = match.index + text.length;
+  }
+
+  if (lastIndex < content.length) nodes.push(content.slice(lastIndex));
+
+  return <>{nodes}</>;
+}
 
 export function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
@@ -106,7 +147,11 @@ export function ChatWidget() {
             <div className="chat-message assistant">{GREETING}</div>
             {messages.map((message, index) => (
               <div key={index} className={`chat-message ${message.role}`}>
-                {message.content || <span className="chat-typing" aria-label="Assistant is typing" />}
+                {message.content ? (
+                  <MessageContent content={message.content} />
+                ) : (
+                  <span className="chat-typing" aria-label="Assistant is typing" />
+                )}
               </div>
             ))}
             {messages.length === 0 && (
