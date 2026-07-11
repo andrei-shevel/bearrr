@@ -1,79 +1,82 @@
 {
   "apps": [
     {
-      "slug": "todo-tide",
-      "name": "Todo Tide",
-      "tagline": "A calm, monospaced to-do app.",
-      "summary": "Make color-coded lists, check things off, and keep a list on your Home Screen. No account, no ads — your tasks stay on your device.",
-      "platform": "iOS",
+      "slug": "mantella",
+      "name": "Mantella",
+      "tagline": "A fast, minimal PDF reader for your Mac.",
+      "summary": "Point Mantella at a folder of PDFs and it becomes your library — crisp native-quality rendering, instant search, and it always remembers exactly where you left off.",
+      "platform": "macOS",
       "price": "Free",
-      "icon": "/apps/todo-tide/icon.png",
-      "accent": "#7ec8b1",
-      "distribution": "appstore",
-      "downloadUrl": "",
+      "icon": "/apps/mantella/icon.png",
+      "accent": "#f0762b",
+      "distribution": "direct",
+      "downloadUrl": "/apps/mantella/Mantella_0.1.0_aarch64.dmg",
       "appStoreId": "",
-      "bundleId": "",
+      "bundleId": "io.bearrr.mantella",
       "supportEmail": "sendtoshevvy@gmail.com",
       "intro": [
-        "Todo Tide is a minimalist to-do app for people who want to capture a task and move on — no clutter, no accounts, no noise.",
-        "Built around a clean, monospaced design that quietly follows your system light or dark appearance, it stays out of the way so you can focus on what's actually on your list."
+        "Mantella is a lightweight desktop PDF reader built for people who live in PDFs — papers, books, manuals, sheet music — and want them to open instantly and look sharp at any zoom level.",
+        "Choose a library folder and Mantella scans it for PDFs and keeps it in sync as files come and go. Pages are rendered by pdfium, the same engine Chromium uses, so everything looks exactly as it should. No accounts, no cloud, no clutter."
       ],
       "features": [
         {
-          "title": "Multiple lists",
-          "description": "Keep separate, color-coded lists for work, groceries, reading, travel, or anything else. Swipe between them, and tap to check things off. Completed tasks tuck away neatly and can be shown or cleared whenever you like."
+          "title": "Your folder is your library",
+          "description": "Pick a folder and Mantella recursively finds every PDF inside it, presenting them in a browsable folder tree that stays in sync as you add, move, or remove files on disk."
         },
         {
-          "title": "Home Screen widget",
-          "description": "Pin any list to your Home Screen so the things that matter are visible at a glance. Tap the widget to jump straight into that list."
+          "title": "Picks up where you left off",
+          "description": "Mantella remembers the page, scroll position, and zoom level for every file individually. Close a book mid-chapter and it opens right back to the same spot — even weeks later."
         },
         {
-          "title": "Private by design",
-          "description": "Everything lives on your device. There's no sign-up, no cloud account to manage, no analytics, and no tracking. Your tasks are yours."
+          "title": "Find things fast",
+          "description": "Search your whole library by filename, navigate the folder tree, and pin your favorites so the documents you reach for most are always one click away."
         },
         {
-          "title": "Designed to be simple",
-          "description": "Add a task in a tap and check it off when it's done. Reorder tasks and lists, color-code each one, and let the app follow your system light or dark appearance automatically."
+          "title": "Native-quality rendering",
+          "description": "Pages are rendered by pdfium — Chromium's PDF engine — on a dedicated worker thread, so text and figures stay crisp at any zoom level and scrolling stays smooth even in large documents."
+        },
+        {
+          "title": "Keyboard friendly",
+          "description": "Navigate pages, zoom, and search without touching the mouse. Common actions all have shortcuts, so reading stays fluid."
+        },
+        {
+          "title": "Light and private",
+          "description": "Built with Tauri and Rust, Mantella is small and fast. Your reading state is stored locally on your Mac — there's no account, no sync service, and no tracking."
         }
       ],
       "highlights": [],
-      "screenshots": [
-        {
-          "src": "/apps/todo-tide/screenshots/04-overview.png",
-          "alt": "Todo Tide lists overview with color-coded cards"
-        },
-        { "src": "/apps/todo-tide/screenshots/02-list-work.png", "alt": "A blue-tinted work list" },
-        { "src": "/apps/todo-tide/screenshots/07-light-overview.png", "alt": "Lists overview in light appearance" },
-        { "src": "/apps/todo-tide/screenshots/03-list-groceries.png", "alt": "A green groceries list" },
-        { "src": "/apps/todo-tide/screenshots/01-list-todo.png", "alt": "A to-do list with tasks ready to check off" }
-      ],
+      "screenshots": [],
       "privacyPolicy": {
-        "effectiveDate": "June 29, 2026",
+        "effectiveDate": "July 11, 2026",
         "collectsData": false,
-        "summary": "Todo Tide does not collect, transmit, or share any personal data. Everything you create stays on your device.",
+        "summary": "Mantella does not collect, transmit, or share any personal data. It has no accounts, no servers, and no analytics.",
         "sections": [
           {
             "title": "What we collect",
             "body": [
-              "Nothing. Todo Tide has no accounts, no sign-up, and no servers of its own. Your lists, tasks, and settings are stored locally on your device and, if you enable it, in your private iCloud account via Apple's standard system storage. We never see this data.",
+              "Nothing. Mantella has no accounts, no sign-up, and no servers. Your settings and per-file reading state (page, scroll position, zoom) are stored locally on your Mac, and we never see them.",
               "There is no analytics, no advertising SDK, no crash-reporting service, and no third-party tracking of any kind in the app."
             ]
           },
           {
-            "title": "What we share",
+            "title": "Files and folder access",
             "body": [
-              "Because no data ever leaves your device to us, there is nothing for us to share or sell. We do not have access to your tasks and could not hand them to anyone even if asked."
+              "Mantella reads the library folder you choose so it can list and render your PDF files, and it watches that folder for changes to keep your library in sync. Your documents are opened locally for display only — their contents are never uploaded, indexed elsewhere, or sent off your device."
             ]
+          },
+          {
+            "title": "What we share",
+            "body": ["Because no data ever leaves your device to us, there is nothing for us to share or sell."]
           },
           {
             "title": "Your data, your control",
             "body": [
-              "You can delete any task, list, or the entire app at any time, which removes the associated data from your device. If you use iCloud, you can manage or remove that copy from your device's iCloud settings."
+              "You can change or remove the library folder at any time, or delete the app entirely, which removes its locally stored settings and reading state from your device. Your PDF files themselves are never modified."
             ]
           },
           {
             "title": "Children's privacy",
-            "body": ["Todo Tide does not knowingly collect any information from anyone, including children under 13."]
+            "body": ["Mantella does not knowingly collect any information from anyone, including children under 13."]
           },
           {
             "title": "Changes to this policy",
@@ -83,7 +86,7 @@
           },
           {
             "title": "Contact",
-            "body": ["Questions about privacy in Todo Tide? Email sendtoshevvy@gmail.com."]
+            "body": ["Questions about privacy in Mantella? Email sendtoshevvy@gmail.com."]
           }
         ]
       }
@@ -167,6 +170,94 @@
           {
             "title": "Contact",
             "body": ["Questions about privacy in Perch? Email sendtoshevvy@gmail.com."]
+          }
+        ]
+      }
+    },
+    {
+      "slug": "todo-tide",
+      "name": "Todo Tide",
+      "tagline": "A calm, monospaced to-do app.",
+      "summary": "Make color-coded lists, check things off, and keep a list on your Home Screen. No account, no ads — your tasks stay on your device.",
+      "platform": "iOS",
+      "price": "Free",
+      "icon": "/apps/todo-tide/icon.png",
+      "accent": "#7ec8b1",
+      "distribution": "appstore",
+      "downloadUrl": "",
+      "appStoreId": "",
+      "bundleId": "",
+      "supportEmail": "sendtoshevvy@gmail.com",
+      "intro": [
+        "Todo Tide is a minimalist to-do app for people who want to capture a task and move on — no clutter, no accounts, no noise.",
+        "Built around a clean, monospaced design that quietly follows your system light or dark appearance, it stays out of the way so you can focus on what's actually on your list."
+      ],
+      "features": [
+        {
+          "title": "Multiple lists",
+          "description": "Keep separate, color-coded lists for work, groceries, reading, travel, or anything else. Swipe between them, and tap to check things off. Completed tasks tuck away neatly and can be shown or cleared whenever you like."
+        },
+        {
+          "title": "Home Screen widget",
+          "description": "Pin any list to your Home Screen so the things that matter are visible at a glance. Tap the widget to jump straight into that list."
+        },
+        {
+          "title": "Private by design",
+          "description": "Everything lives on your device. There's no sign-up, no cloud account to manage, no analytics, and no tracking. Your tasks are yours."
+        },
+        {
+          "title": "Designed to be simple",
+          "description": "Add a task in a tap and check it off when it's done. Reorder tasks and lists, color-code each one, and let the app follow your system light or dark appearance automatically."
+        }
+      ],
+      "highlights": [],
+      "screenshots": [
+        {
+          "src": "/apps/todo-tide/screenshots/04-overview.png",
+          "alt": "Todo Tide lists overview with color-coded cards"
+        },
+        { "src": "/apps/todo-tide/screenshots/02-list-work.png", "alt": "A blue-tinted work list" },
+        { "src": "/apps/todo-tide/screenshots/07-light-overview.png", "alt": "Lists overview in light appearance" },
+        { "src": "/apps/todo-tide/screenshots/03-list-groceries.png", "alt": "A green groceries list" },
+        { "src": "/apps/todo-tide/screenshots/01-list-todo.png", "alt": "A to-do list with tasks ready to check off" }
+      ],
+      "privacyPolicy": {
+        "effectiveDate": "June 29, 2026",
+        "collectsData": false,
+        "summary": "Todo Tide does not collect, transmit, or share any personal data. Everything you create stays on your device.",
+        "sections": [
+          {
+            "title": "What we collect",
+            "body": [
+              "Nothing. Todo Tide has no accounts, no sign-up, and no servers of its own. Your lists, tasks, and settings are stored locally on your device and, if you enable it, in your private iCloud account via Apple's standard system storage. We never see this data.",
+              "There is no analytics, no advertising SDK, no crash-reporting service, and no third-party tracking of any kind in the app."
+            ]
+          },
+          {
+            "title": "What we share",
+            "body": [
+              "Because no data ever leaves your device to us, there is nothing for us to share or sell. We do not have access to your tasks and could not hand them to anyone even if asked."
+            ]
+          },
+          {
+            "title": "Your data, your control",
+            "body": [
+              "You can delete any task, list, or the entire app at any time, which removes the associated data from your device. If you use iCloud, you can manage or remove that copy from your device's iCloud settings."
+            ]
+          },
+          {
+            "title": "Children's privacy",
+            "body": ["Todo Tide does not knowingly collect any information from anyone, including children under 13."]
+          },
+          {
+            "title": "Changes to this policy",
+            "body": [
+              "If this policy ever changes, the updated version will be posted on this page with a new effective date."
+            ]
+          },
+          {
+            "title": "Contact",
+            "body": ["Questions about privacy in Todo Tide? Email sendtoshevvy@gmail.com."]
           }
         ]
       }
