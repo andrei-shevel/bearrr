@@ -14,7 +14,7 @@ const AppleLogo = () => (
 
 const badgeText = {
   appstore: { soon: ['Coming soon to the', 'App Store'], ready: ['Download on the', 'App Store'] },
-  direct: { soon: ['Coming soon for', 'Mac'], ready: ['Download for', 'Mac'] },
+  direct: { soon: ['Coming soon for', 'Mac'], ready: ['Download for', 'Mac (Apple Silicon)'] },
 } as const;
 
 export function AppStoreBadge({ url, large = false, variant = 'appstore' }: AppStoreBadgeProps) {
