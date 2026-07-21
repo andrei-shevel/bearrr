@@ -10,7 +10,7 @@
       "icon": "/apps/mantella/icon.png",
       "accent": "#f0762b",
       "distribution": "direct",
-      "downloadUrl": "/apps/mantella/Mantella_0.1.0_aarch64.dmg",
+      "downloadUrl": "https://github.com/andrei-shevel/mantella/releases/download/v0.1.0/Mantella_0.1.0_aarch64.dmg",
       "appStoreId": "",
       "bundleId": "io.bearrr.mantella",
       "supportEmail": "sendtoshevvy@gmail.com",
