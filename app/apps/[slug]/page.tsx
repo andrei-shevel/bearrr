@@ -14,14 +14,16 @@ type AppPageProps = {
 };
 
 export function generateStaticParams() {
-  return getApps().map((app) => ({ slug: app.slug }));
+  return getApps()
+    .filter((app) => !app.detailsUrl)
+    .map((app) => ({ slug: app.slug }));
 }
 
 export async function generateMetadata({ params }: AppPageProps): Promise<Metadata> {
   const { slug } = await params;
   const app = getApp(slug);
 
-  if (!app) {
+  if (!app || app.detailsUrl) {
     return {};
   }
 
@@ -47,7 +49,7 @@ export default async function AppPage({ params }: AppPageProps) {
   const { slug } = await params;
   const app = getApp(slug);
 
-  if (!app) {
+  if (!app || app.detailsUrl) {
     notFound();
   }
 

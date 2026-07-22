@@ -33,6 +33,7 @@ export type App = {
   accent: string;
   distribution: 'appstore' | 'direct';
   downloadUrl: string;
+  detailsUrl?: string;
   appStoreId: string;
   bundleId: string;
   supportEmail: string;

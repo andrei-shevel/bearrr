@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Mantella's privacy policy — the app collects no analytics, has no accounts, and keeps your library and reading data on your device."
+    />
+    <title>Privacy Policy – Mantella</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="page">
+      <header class="banner">
+        <a class="brand" href="./">
+          <img src="icon.png" alt="" width="64" height="64" />
+          <span class="brand-text">
+            <span class="brand-name">Mantella</span>
+            <span class="brand-tag">a desktop PDF reader</span>
+          </span>
+        </a>
+      </header>
+
+      <div class="layout">
+        <main id="main">
+          <h1>Privacy Policy</h1>
+
+          <p><em>Last updated: 22 July 2026</em></p>
+
+          <p>
+            Mantella is a local-first desktop app. It doesn't have an account system, doesn't run analytics or
+            telemetry, and doesn't send your documents, library contents, or reading activity anywhere. This page
+            explains exactly what little network activity the app does have.
+          </p>
+
+          <h2 id="what-we-collect">What Mantella collects</h2>
+          <p>
+            Nothing. Mantella has no servers of its own and no analytics or crash-reporting service is built into the
+            app. There is no account to create and no personal information is ever requested.
+          </p>
+
+          <h2 id="local-data">What's stored, and where</h2>
+          <p>
+            Your PDF library, reading position, zoom level, scroll offset, and pins are stored in a local settings file
+            on your own computer, alongside app preferences. None of this leaves your device, and Mantella has no way to
+            read it remotely even if it wanted to.
+          </p>
+
+          <h2 id="auto-updates">Auto-updates</h2>
+          <p>
+            On startup, and whenever you use "Check for Updates…", Mantella makes an HTTPS request to GitHub to see if a
+            newer release is available, and downloads the update from GitHub if you choose to install it. This is a
+            plain request for a public release manifest — no document contents, library data, or identifying information
+            about you is included. As with any web request, GitHub's servers will see standard connection details (such
+            as your IP address and app version) as part of normal HTTPS traffic; Mantella doesn't add anything to that
+            beyond what's needed to check for a new version. See
+            <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement"
+              >GitHub's privacy statement</a
+            >
+            for how they handle that traffic.
+          </p>
+
+          <h2 id="third-parties">Third parties</h2>
+          <p>
+            Mantella doesn't embed ads, trackers, or third-party SDKs. The only external service it talks to is GitHub,
+            solely for auto-updates as described above.
+          </p>
+
+          <h2 id="changes">Changes to this policy</h2>
+          <p>
+            If Mantella's data practices ever change, this page will be updated to reflect that before the change ships.
+          </p>
+
+          <h2 id="contact">Contact</h2>
+          <p>
+            Questions can be raised via the
+            <a href="https://github.com/andrei-shevel/mantella/issues">issue tracker</a>.
+          </p>
+        </main>
+
+        <aside class="sidebar" aria-label="Site">
+          <h3>Mantella</h3>
+          <ul>
+            <li>
+              <a href="https://github.com/andrei-shevel/mantella/releases/latest">Download</a>
+            </li>
+            <li>
+              <a href="https://github.com/andrei-shevel/mantella">Source</a>
+            </li>
+            <li>
+              <a href="https://github.com/andrei-shevel/mantella/issues">Issue Tracker</a>
+            </li>
+            <li>
+              <a href="https://github.com/andrei-shevel/mantella/blob/main/LICENSE">License</a>
+            </li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </aside>
+      </div>
+
+      <footer class="site-footer">
+        <p>Copyright © 2026 Mantella. Open source desktop PDF reader.</p>
+      </footer>
+    </div>
+  </body>
+</html>

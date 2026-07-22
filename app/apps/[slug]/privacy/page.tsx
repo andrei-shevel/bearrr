@@ -11,14 +11,16 @@ type PrivacyPageProps = {
 };
 
 export function generateStaticParams() {
-  return getApps().map((app) => ({ slug: app.slug }));
+  return getApps()
+    .filter((app) => !app.detailsUrl)
+    .map((app) => ({ slug: app.slug }));
 }
 
 export async function generateMetadata({ params }: PrivacyPageProps): Promise<Metadata> {
   const { slug } = await params;
   const app = getApp(slug);
 
-  if (!app) {
+  if (!app || app.detailsUrl) {
     return {};
   }
 
@@ -32,7 +34,7 @@ export default async function AppPrivacyPage({ params }: PrivacyPageProps) {
   const { slug } = await params;
   const app = getApp(slug);
 
-  if (!app) {
+  if (!app || app.detailsUrl) {
     notFound();
   }
 

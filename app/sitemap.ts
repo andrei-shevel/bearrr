@@ -6,18 +6,26 @@ const baseUrl = process.env.SITE_URL!;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const appRoutes: MetadataRoute.Sitemap = getApps().flatMap((app) => [
-    {
-      url: `${baseUrl}/apps/${app.slug}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/apps/${app.slug}/privacy`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
+    ...(app.detailsUrl
+      ? []
+      : [
+          {
+            url: `${baseUrl}/apps/${app.slug}`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly' as const,
+            priority: 0.8,
+          },
+        ]),
+    ...(app.detailsUrl
+      ? []
+      : [
+          {
+            url: `${baseUrl}/apps/${app.slug}/privacy`,
+            lastModified: new Date(),
+            changeFrequency: 'yearly' as const,
+            priority: 0.3,
+          },
+        ]),
   ]);
 
   return [

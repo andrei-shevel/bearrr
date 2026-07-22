@@ -12,7 +12,7 @@ export function AppList() {
     <ul className="apps-list">
       {apps.map((app) => (
         <li key={app.slug} className="app-item">
-          <Link href={`/apps/${app.slug}`} className="app-item-link">
+          <Link href={app.detailsUrl ?? `/apps/${app.slug}`} className="app-item-link">
             <Image className="app-item-icon" src={app.icon} alt={`${app.name} app icon`} width={72} height={72} />
             <div className="app-item-body">
               <div className="app-item-header">
